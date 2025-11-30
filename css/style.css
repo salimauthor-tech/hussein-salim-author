@@ -129,6 +129,13 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--primary-gold);
 }
 
+/* Logo image inside the nav. Keeps text styles as fallback for accessibility. */
+.nav-logo-image {
+    height: 40px;
+    width: auto;
+    display: block;
+}
+
 .nav-menu {
     display: flex;
     gap: 2rem;
