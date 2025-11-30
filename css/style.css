@@ -134,6 +134,16 @@ h1, h2, h3, h4, h5, h6 {
     height: 40px;
     width: auto;
     display: block;
+    margin-right: 1rem;
+    transition: opacity 180ms ease, transform 180ms ease;
+    will-change: opacity, transform;
+}
+
+/* Hover / focus state for logo */
+.nav-logo:hover .nav-logo-image,
+.nav-logo:focus .nav-logo-image {
+    opacity: 0.9;
+    transform: translateY(-1px);
 }
 
 .nav-menu {
