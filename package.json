@@ -1,0 +1,21 @@
+{
+  "name": "hussein-author2025",
+  "version": "1.0.0",
+  "description": "Premium author website for Hussein Salim - Visionary Author & Speaker",
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server --port=3000",
+    "build": "echo 'Build complete'"
+  },
+  "keywords": [
+    "author",
+    "website",
+    "hussein-salim",
+    "the-phoenix-covenant"
+  ],
+  "author": "Hussein Salim",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.0"
+  }
+}
