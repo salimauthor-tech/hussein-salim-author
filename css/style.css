@@ -127,6 +127,16 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--primary-gold);
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: opacity 180ms ease;
+}
+
+.nav-logo:hover,
+.nav-logo:focus {
+    opacity: 0.9;
+    outline: none;
 }
 
 /* Logo image inside the nav. Keeps text styles as fallback for accessibility. */
