@@ -6,7 +6,7 @@ Official Author Website for **Hussein Salim** - Visionary Author & Speaker, feat
 
 ## 🌟 Live Website
 
-➡️ **[View Live Author Website](https://yourusername.github.io/hussein-salim-author/)**
+➡️ **[View Live Author Website](https://salimauthor-tech.github.io/hussein-salim-author/)**
 
 ---
 
