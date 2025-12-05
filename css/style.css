@@ -1279,5 +1279,103 @@ img,
     .author-image {
         max-width: 100vw;
     }
+/* --- Author Photo Modern Styling --- */
+/* --- Author Photo Modern Styling --- */
+.author-frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 6px;
+    background: linear-gradient(135deg, #e0c68a 0%, #bfa785 100%);
+    box-shadow: 0 6px 24px rgba(0,0,0,0.13), 0 2px 8px rgba(0,0,0,0.07);
+    transition: box-shadow 0.3s, transform 0.3s;
 }
+
+.author-frame:hover {
+    box-shadow: 0 8px 32px rgba(201,179,136,0.18), 0 4px 12px rgba(0,0,0,0.11);
+    transform: scale(1.03);
 }
+
+.author-image {
+    display: block;
+    border-radius: 50%;
+    width: 220px;
+    height: 220px;
+    max-width: 80vw;
+    max-height: 80vw;
+    object-fit: cover;
+    filter: grayscale(3%) brightness(1.09);
+    transition: filter 0.3s;
+    opacity: 0;
+    animation: fadeInAuthor 1.2s 0.2s forwards;
+}
+
+.author-frame:hover .author-image {
+    filter: grayscale(0%) brightness(1.12) contrast(1.05);
+}
+
+@media (max-width: 600px) {
+    .author-image {
+        width: 120px;
+        height: 120px;
+        max-width: 95vw;
+        max-height: 95vw;
+    }
+    .author-section .author-grid {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@keyframes fadeInAuthor {
+    to { opacity: 1;}
+}
+/* --- End Author Photo Styling --- *//* --- Book Cover Modern Styling --- */
+.book-cover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 24px;
+    box-shadow: 0 12px 36px rgba(201,179,136,0.19),
+                0 2px 8px rgba(0,0,0,0.07);
+    transition: box-shadow 0.3s, transform 0.3s;
+    perspective: 800px;
+}
+
+.book-cover:hover {
+    box-shadow: 0 16px 40px rgba(201,179,136,0.24),
+                0 4px 14px rgba(0,0,0,0.17);
+    transform: scale(1.028) rotateY(-4deg);
+}
+
+.book-cover-image {
+    display: block;
+    width: 250px;
+    height: 340px;
+    max-width: 90vw;
+    max-height: 60vw;
+    object-fit: cover;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 8px 18px rgba(108, 82, 12, 0.11);
+    opacity: 0;
+    animation: fadeInBook 1.3s 0.32s forwards;
+}
+
+@media (max-width: 600px) {
+    .book-cover-image {
+        width: 130px;
+        height: 180px;
+        max-width: 95vw;
+        max-height: 70vw;
+    }
+}
+
+@keyframes fadeInBook {
+    to { opacity: 1; }
+}
+/* --- End Book Cover Styling --- */
