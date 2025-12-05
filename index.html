@@ -98,19 +98,25 @@
     </section>
 
     <!-- Author Photo Section -->
-    <section id="author-photo" class="author-section">
+<section id="author-photo" class="author-section">
     <div class="container">
         <div class="author-grid">
             <div class="author-image-container">
                 <div class="author-frame">
-                    <img 
-                        src="images/hussein.jpeg" 
-                        alt="Hussein Salim Author Photo"
-                        class="author-image"
-                    >
+                    <picture>
+                        <source srcset="images/hussein.webp" type="image/webp">
+                        <img 
+                            src="images/hussein.jpeg" 
+                            alt="Hussein Salim, visionary author and speaker"
+                            class="author-image"
+                            loading="lazy"
+                        >
+                    </picture>
                 </div>
             </div>
-
+        </div>
+    </div>
+            <!-- ... the rest of your author-bio remains the same ... -->
                 <div class="author-bio">
                     <h2 class="section-title">Meet The Author</h2>
                     <p class="author-description">
