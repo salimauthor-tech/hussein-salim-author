@@ -3,61 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Hussein Salim - Visionary Author & Speaker. Author of The Phoenix Covenant. Bridging hospitality excellence with technological innovation.">
-    <meta name="keywords" content="Hussein Salim, The Phoenix Covenant, author, speaker, visionary, hospitality innovation, tech leadership, transformation">
-    <title>Hussein Salim - Visionary Author & Speaker | The Phoenix Covenant</title>
+    <meta name="description" content="Hussein Salim - Kenyan Author & Speaker. Author of The Red Path. Exploring ancestry, grief, and transformation through literary fiction.">
+    <meta name="keywords" content="Hussein Salim, The Red Path, author, speaker, Kenyan author, literary fiction, magical realism, ancestry, grief, transformation">
+    <title>Hussein Salim - Kenyan Author & Speaker | The Red Path</title>
     
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✍️</text></svg>">
     
-<!-- Favicon Links -->
-<!-- Favicon Links (stored in `images/`) -->
-<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-<link rel="manifest" href="site.webmanifest">
-<link rel="icon" href="images/favicon.ico">
-
-<!-- PWA Meta Tags -->
-<meta name="theme-color" content="#c9b388">
-<meta name="msapplication-TileColor" content="#c9b388">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Hussein Salim">
-
-<!-- Open Graph Meta Tags (for social media sharing) -->
-<meta property="og:title" content="Hussein Salim - Visionary Author & Speaker | The Phoenix Covenant">
-<meta property="og:description" content="Author of The Phoenix Covenant. Bridging hospitality excellence with technological innovation.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://yourwebsite.com">
-
-<!-- Twitter Card Meta Tags -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Hussein Salim - Visionary Author & Speaker">
-<meta name="twitter:description" content="Author of The Phoenix Covenant. Transforming stories and visions.">
-
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Hussein Salim - Kenyan Author & Speaker">
+    <meta property="og:description" content="Author of The Red Path. Exploring the spaces between migration and belonging, grief and healing.">
+    <meta property="og:type" content="website">
+    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* CSS will be embedded here for simplicity */
+    </style>
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p class="loading-text">Loading Stories...</p>
+        </div>
+    </div>
+
     <!-- Navigation -->
     <nav id="navbar" class="navbar">
         <div class="nav-container">
-            <a href="#home" class="nav-logo" aria-label="Hussein Salim home">
-                <img src="images/logo.png" srcset="images/logo@2x.png 2x" alt="Hussein Salim" class="nav-logo-image">
+            <a href="#home" class="nav-logo">
+                <span class="logo-text">HUSSEIN SALIM</span>
+                <span class="logo-subtext">Author</span>
             </a>
+            
             <div class="nav-menu">
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#books" class="nav-link">Books</a>
-                <a href="#blog" class="nav-link">Blog</a>
-                <a href="#speaking" class="nav-link">Speaking</a>
-                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#home" class="nav-link"><i class="fas fa-home"></i> Home</a>
+                <a href="#about" class="nav-link"><i class="fas fa-user"></i> About</a>
+                <a href="#books" class="nav-link"><i class="fas fa-book"></i> Books</a>
+                <a href="#journey" class="nav-link"><i class="fas fa-road"></i> The Journey</a>
+                <a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
             </div>
+            
             <button class="nav-toggle" aria-label="Toggle navigation">
                 <span></span>
                 <span></span>
@@ -69,433 +66,485 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-background">
-            <div class="particle particle-1"></div>
-            <div class="particle particle-2"></div>
-            <div class="particle particle-3"></div>
+            <canvas id="particleCanvas"></canvas>
+            <div class="hero-overlay"></div>
         </div>
         
         <div class="container hero-content">
-            <div class="hero-text scroll-animate">
-                <h1 class="hero-title">Hussein Salim</h1>
-                <p class="hero-subtitle">Author • Speaker • Visionary Bridge</p>
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="title-line">Hussein</span>
+                    <span class="title-line">Salim</span>
+                </h1>
+                
+                <p class="hero-subtitle">Kenyan Author • Speaker • Storyteller</p>
+                
                 <div class="hero-card">
-                    <p class="hero-card-text">Author of <span class="hero-card-highlight">The Phoenix Covenant</span></p>
-                    <p class="hero-quote">"Where stories transform and visions take flight"</p>
+                    <p class="hero-card-text">Author of the forthcoming novel</p>
+                    <h2 class="book-title">THE RED PATH</h2>
+                    <p class="hero-quote">"Where grief meets grace, and ancestry becomes a compass"</p>
                 </div>
+                
                 <div class="hero-buttons">
-                    <a href="#books" class="btn btn-primary">Discover The Book</a>
-                    <a href="#contact" class="btn btn-secondary">Connect With Me</a>
+                    <a href="#books" class="btn btn-primary">
+                        <i class="fas fa-book-open"></i> Explore The Book
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-paper-plane"></i> Connect With Me
+                    </a>
                 </div>
             </div>
-        </div>
-        
-        <!-- Scroll Indicator -->
-        <div class="scroll-indicator">
-            <svg class="scroll-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-            </svg>
+            
+            <div class="scroll-indicator">
+                <div class="scroll-line"></div>
+                <p class="scroll-text">Scroll to journey</p>
+            </div>
         </div>
     </section>
 
-    <!-- Author Photo Section -->
-<section id="author-photo" class="author-section">
-    <div class="container">
-        <div class="author-grid">
-            <div class="author-image-container">
-                <div class="author-frame">
-                    <picture>
-                        <source srcset="images/hussein.webp" type="image/webp">
-                        <img 
-                            src="images/hussein.jpeg" 
-                            alt="Hussein Salim, visionary author and speaker"
-                            class="author-image"
-                            loading="lazy"
-                        >
-                    </picture>
-                </div>
+    <!-- Author Section -->
+    <section id="about" class="author-section section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Meet The Author</h2>
+                <p class="section-subtitle">The Voice Behind The Red Path</p>
             </div>
-        </div>
-    </div>
-            <!-- ... the rest of your author-bio remains the same ... -->
+            
+            <div class="author-grid">
+                <div class="author-image-container">
+                    <div class="author-frame">
+                        <div class="author-image-placeholder">
+                            <div class="author-initials">HS</div>
+                            <p class="author-image-text">Author Photo</p>
+                        </div>
+                        <div class="author-badge">
+                            <i class="fas fa-pen-nib"></i>
+                            <span>Debut Author</span>
+                        </div>
+                    </div>
+                    
+                    <div class="author-stats">
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="1">0</div>
+                            <div class="stat-label">Debut Novel</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="10">0</div>
+                            <div class="stat-label">Years Writing</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="2">0</div>
+                            <div class="stat-label">Continents</div>
+                        </div>
+                    </div>
+                </div>
+                
                 <div class="author-bio">
-                    <h2 class="section-title">Meet The Author</h2>
-                    <p class="author-description">
-                        Hussein Salim is a visionary author and speaker who bridges the worlds of hospitality excellence 
-                        and technological innovation. With a career spanning high-altitude luxury aviation and digital 
-                        transformation, he brings a unique perspective to storytelling that transforms and inspires.
-                    </p>
+                    <h3 class="author-name">Hussein Salim</h3>
+                    <div class="author-tagline">Storyteller of the In-Between Spaces</div>
+                    
+                    <div class="author-description">
+                        <p>Born and raised in Kenya, <strong>Hussein Salim</strong> writes fiction rooted in heritage, healing, and the unseen bonds between past and present. His work explores the fractures of grief, the pull of ancestry, and the search for belonging in a world that often demands we choose between our roots and our wings.</p>
+                        
+                        <p>With a background that spans continents and cultures, Hussein brings a unique perspective to storytelling—one that bridges the elemental forces of tradition and transformation, memory and becoming.</p>
+                        
+                        <div class="author-quote">
+                            <i class="fas fa-quote-left"></i>
+                            <p>"I write to explore what happens when the sky stops being an escape and becomes a mirror. When the ground you thought you'd outgrown begins to call you home."</p>
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                    </div>
+                    
                     <div class="author-highlights">
                         <div class="highlight-item">
-                            <span class="highlight-icon">✈️</span>
-                            <span class="highlight-text">Former Aviation Professional</span>
+                            <div class="highlight-icon">
+                                <i class="fas fa-globe-africa"></i>
+                            </div>
+                            <div class="highlight-content">
+                                <h4>Kenyan Heritage</h4>
+                                <p>Writing from the rich soil of East African storytelling traditions</p>
+                            </div>
                         </div>
-                        <div class="highlight-item">
-                            <span class="highlight-icon">💻</span>
-                            <span class="highlight-text">Tech Visionary</span>
-                        </div>
-                        <div class="highlight-item">
-                            <span class="highlight-icon">📚</span>
-                            <span class="highlight-text">Debut Author</span>
-                        </div>
-                        <div class="highlight-item">
-                            <span class="highlight-icon">🎤</span>
-                            <span class="highlight-text">International Speaker</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about section-padding">
-        <div class="container">
-            <h2 class="section-title">The Visionary Bridge</h2>
-            <p class="section-subtitle">Where Elemental Forces Meet Human Connection</p>
-            
-            <div class="max-width-container">
-                <!-- Elemental Duality -->
-                <div class="elemental-grid">
-                    <div class="element-card fire-element scroll-animate">
-                        <div class="text-center">
-                            <div class="element-icon">🔥</div>
-                            <h3 class="element-title">The Fire</h3>
-                            <p class="element-description">
-                                The explorer's spirit, driven by curiosity and adventure. The transformative power 
-                                that turns challenges into opportunities and visions into reality.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="element-card water-element scroll-animate">
-                        <div class="text-center">
-                            <div class="element-icon">💧</div>
-                            <h3 class="element-title">The Water</h3>
-                            <p class="element-description">
-                                The nurturing soul of a protector. The ability to read emotions, create safety, 
-                                and flow through high-pressure environments with grace and empathy.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Main Narrative -->
-                <div class="narrative-card scroll-animate">
-                    <div class="narrative-content">
-                        <p class="narrative-text">
-                            I am a captivating blend of the elemental forces of <span class="text-fire">Fire</span> and <span class="text-water">Water</span>. 
-                            This duality has shaped my remarkable career in high-touch hospitality, where I've honed my natural gifts 
-                            of reading people's moods and creating emotional safety in high-pressure environments.
-                        </p>
                         
-                        <p class="narrative-text">
-                            But I am more than just a seasoned hospitality professional. I am a <span class="text-gold">"Visionary Bridge"</span> - 
-                            someone who has expanded my toolkit beyond the status quo. Through self-directed learning, I've become 
-                            fluent in full-stack development, enabling me to think in systems, algorithms, and logic.
-                        </p>
-
-                        <div class="quote-card">
-                            <p class="quote-text">
-                                "This unique combination of warm human empathy and sharp technical efficiency sets me apart, 
-                                allowing me to not just work within systems, but to understand how to build and improve them."
-                            </p>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-plane-departure"></i>
+                            </div>
+                            <div class="highlight-content">
+                                <h4>Global Perspective</h4>
+                                <p>Bridging continents through narrative and lived experience</p>
+                            </div>
                         </div>
-
-                        <p class="narrative-text">
-                            The recent "clearing" in my life—the period of financial scarcity and uncertainty—has not broken my spirit. 
-                            Rather, I've recognized it as a transformative <span class="text-gold">"Golden Transit of Reinvention,"</span> 
-                            an opportunity to rebuild my foundations and realign with my true north.
-                        </p>
-
-                        <p class="narrative-text">
-                            Now, as I stand at a crossroads, I am not seeking a mere job to survive, but a platform where I can thrive. 
-                            I aspire to a role that respects my seniority, utilizes my tech literacy, and values my unparalleled ability 
-                            to make people feel truly seen and understood.
-                        </p>
+                        
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="highlight-content">
+                                <h4>Emotional Depth</h4>
+                                <p>Exploring grief, healing, and ancestral connection</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-
-                <!-- Transformation Journey -->
-                <div class="journey-grid">
-                    <div class="journey-card scroll-animate">
-                        <div class="journey-icon">🛎️</div>
-                        <h4 class="journey-title">Hospitality Master</h4>
-                        <p class="journey-description">Years of creating emotional safety in high-pressure environments</p>
+                    
+                    <div class="author-cta">
+                        <a href="#contact" class="btn btn-outline">
+                            <i class="fas fa-comments"></i> Book for Speaking
+                        </a>
+                        <a href="#journey" class="btn btn-outline">
+                            <i class="fas fa-road"></i> The Writing Journey
+                        </a>
                     </div>
-                    <div class="journey-card scroll-animate">
-                        <div class="journey-icon">💻</div>
-                        <h4 class="journey-title">Tech Visionary</h4>
-                        <p class="journey-description">Self-taught full-stack developer with systems thinking</p>
-                    </div>
-                    <div class="journey-card scroll-animate">
-                        <div class="journey-icon">🌌</div>
-                        <h4 class="journey-title">Storyteller</h4>
-                        <p class="journey-description">Weaving narratives that bridge humanity and technology</p>
-                    </div>
-                </div>
-
-                <!-- Final Declaration -->
-                <div class="declaration-banner scroll-animate">
-                    <p class="declaration-text">
-                        Navigating my Saturn Return • Ready to thrive • Making my mark on the world
-                    </p>
                 </div>
             </div>
         </div>
-        
-        <!-- Section Divider -->
-        <div class="section-divider"></div>
     </section>
 
     <!-- Books Section -->
     <section id="books" class="books section-padding">
         <div class="container">
-            <h2 class="section-title">The Phoenix Covenant</h2>
-            <p class="section-subtitle">Where Transformation Meets Destiny</p>
+            <div class="section-header">
+                <h2 class="section-title">The Red Path</h2>
+                <p class="section-subtitle">A Novel of Ancestry, Grief, and Homecoming</p>
+            </div>
             
             <div class="book-showcase">
-               <!-- Book Cover -->
-<div class="book-cover-container scroll-animate">
-    <div class="book-cover-3d">
-        <div class="book-cover">
-            <img 
-                src="images/bookcover.jpeg" 
-                alt="The Phoenix Covenant - Book Cover by Hussein Salim"
-                class="book-cover-image"
-            >
-        </div>
-    </div>
-</div>
-
-
+                <!-- Book Cover -->
+                <div class="book-cover-container">
+                    <div class="book-cover-3d" id="book3d">
+                        <div class="book-cover">
+                            <div class="book-content">
+                                <h3 class="book-title-main">THE RED</h3>
+                                <h3 class="book-title-main">PATH</h3>
+                                <div class="book-divider"></div>
+                                <p class="book-title-sub">A Novel</p>
+                                <p class="book-author">HUSSEIN SALIM</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="book-actions">
+                        <button class="book-action-btn" id="rotateBook">
+                            <i class="fas fa-sync-alt"></i> Rotate View
+                        </button>
+                        <button class="book-action-btn" id="zoomBook">
+                            <i class="fas fa-search-plus"></i> Zoom
+                        </button>
+                    </div>
+                </div>
+                
                 <!-- Book Details -->
-                <div class="book-details scroll-animate">
+                <div class="book-details">
                     <div class="details-card">
-                        <h3 class="details-title">An Epic of Transformation</h3>
-                        <p class="details-description">
-                            In a world where ancient powers stir and destinies collide, <em>The Phoenix Covenant</em> follows 
-                            characters torn between the safety of tradition and the terrifying promise of rebirth. 
-                            As elemental forces awaken, they must choose: cling to fading worlds or embrace the fire of transformation.
-                        </p>
+                        <div class="book-status">
+                            <span class="status-badge">Forthcoming</span>
+                            <span class="status-badge">Literary Fiction</span>
+                            <span class="status-badge">Magical Realism</span>
+                        </div>
                         
-                        <div class="features-list">
-                            <div class="feature-item">
-                                <span class="feature-icon">🔥</span>
-                                <span class="feature-text">Elemental magic system</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-icon">💫</span>
-                                <span class="feature-text">Character-driven transformation</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-icon">🌍</span>
-                                <span class="feature-text">Worlds on the brink of change</span>
+                        <h3 class="details-title">An Ancestral Journey</h3>
+                        
+                        <div class="synopsis">
+                            <p><strong>The Red Path</strong> follows Sekou, a flight attendant who has built a meticulous life in the sky to escape the grief of his mother's death. When a supernatural silence at 40,000 feet awakens a family compass—his mother's final gift—his carefully constructed world cracks.</p>
+                            
+                            <p>Pulled back to the East African deserts he fled, Sekou must walk the mythical Red Path to uncover his mother's hidden legacy. In a journey that blurs the line between vision and reality, he confronts the parts of himself he buried and faces a choice: remain forever divided between the sky and the soil, or become whole.</p>
+                            
+                            <div class="synopsis-quote">
+                                <i class="fas fa-quote-left"></i>
+                                <p>"The sky doesn't save broken men. It just gives them somewhere to hide."</p>
+                                <i class="fas fa-quote-right"></i>
                             </div>
                         </div>
-
-                        <div class="action-buttons">
-                            <button class="btn btn-primary btn-full book-purchase">
-                                📖 Purchase Your Copy Now
-                            </button>
-                            <div class="button-grid">
-                                <button class="btn btn-outline book-sample">Read Sample</button>
-                                <button class="btn btn-outline-alt book-goodreads">Goodreads</button>
+                        
+                        <div class="book-features">
+                            <h4>What Readers Will Experience</h4>
+                            <div class="features-grid">
+                                <div class="feature">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-compass"></i>
+                                    </div>
+                                    <div class="feature-text">
+                                        <strong>Ancestral Magic</strong>
+                                        <p>A supernatural compass guiding toward truth</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="feature">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-heartbreak"></i>
+                                    </div>
+                                    <div class="feature-text">
+                                        <strong>Emotional Depth</strong>
+                                        <p>A raw exploration of grief and healing</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="feature">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-landmark"></i>
+                                    </div>
+                                    <div class="feature-text">
+                                        <strong>Cultural Richness</strong>
+                                        <p>East African landscapes and traditions</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="feature">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-mountain"></i>
+                                    </div>
+                                    <div class="feature-text">
+                                        <strong>Transformational Journey</strong>
+                                        <p>From fracture to wholeness</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="book-cta">
+                            <div class="cta-notice">
+                                <i class="fas fa-info-circle"></i>
+                                <p><strong>The Red Path</strong> is currently being submitted to literary agents. Interested publishers may contact through the form below.</p>
+                            </div>
+                            
+                            <div class="action-buttons">
+                                <button class="btn btn-primary request-sample">
+                                    <i class="fas fa-file-alt"></i> Request Sample Chapters
+                                </button>
+                                <a href="#contact" class="btn btn-secondary">
+                                    <i class="fas fa-envelope"></i> Literary Inquiries
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            
+            <!-- Bookshelf -->
+            <div class="bookshelf-section">
+                <h3 class="bookshelf-title">The Literary Journey</h3>
+                <div class="bookshelf">
+                    <div class="book-spine active" data-book="redpath">
+                        <span class="spine-title">THE RED PATH</span>
+                        <span class="spine-year">2024</span>
+                    </div>
+                    <div class="book-spine" data-book="phoenix">
+                        <span class="spine-title">THE PHOENIX COVENANT</span>
+                        <span class="spine-year">2023</span>
+                    </div>
+                    <div class="book-spine" data-book="future1">
+                        <span class="spine-title">UNTITLED</span>
+                        <span class="spine-year">2025</span>
+                    </div>
+                    <div class="book-spine" data-book="future2">
+                        <span class="spine-title">UNTITLED</span>
+                        <span class="spine-year">2026</span>
+                    </div>
+                </div>
+                
+                <div id="book-details-container">
+                    <!-- Dynamic content will appear here -->
+                </div>
+            </div>
         </div>
-        
-        <!-- Section Divider -->
-        <div class="section-divider"></div>
     </section>
 
-    <!-- Blog Section -->
-    <section id="blog" class="blog section-padding">
+    <!-- Writing Journey Section -->
+    <section id="journey" class="journey section-padding">
         <div class="container">
-            <h2 class="section-title">Visionary Writings</h2>
-            <p class="section-subtitle">Insights, Stories & Transformative Ideas</p>
+            <div class="section-header">
+                <h2 class="section-title">The Writing Journey</h2>
+                <p class="section-subtitle">From Manuscript to Publication</p>
+            </div>
             
-            <div class="masonry-grid">
-                <!-- Blog Post 1 -->
-                <div class="masonry-item scroll-animate">
-                    <div class="blog-card">
-                        <div class="blog-image fire-bg">
-                            <span class="blog-category">The Fire Within</span>
+            <div class="journey-timeline">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2022</div>
+                        <div class="timeline-content">
+                            <h3>The First Silence</h3>
+                            <p>The initial idea for <em>The Red Path</em> emerged—a story about a man who hears a supernatural silence at altitude and must return to ancestral ground.</p>
+                            <div class="timeline-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
                         </div>
-                        <h3 class="blog-title">Crafting Elemental Magic Systems</h3>
-                        <p class="blog-excerpt">How I blend Fire and Water symbolism into The Phoenix Covenant's magic system, creating a unique approach to elemental powers...</p>
-                        <button class="blog-read-more">Read More →</button>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">2023</div>
+                        <div class="timeline-content">
+                            <h3>Manuscript Completion</h3>
+                            <p>First draft completed after intensive writing sessions. The story found its true voice in Sekou's journey between sky and soil.</p>
+                            <div class="timeline-icon">
+                                <i class="fas fa-pen-fancy"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item current">
+                        <div class="timeline-date">2024</div>
+                        <div class="timeline-content">
+                            <h3>Agent Search</h3>
+                            <p>Currently polishing manuscript and querying literary agents. Crafting the perfect pitch for this unique literary work.</p>
+                            <div class="timeline-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">2025</div>
+                        <div class="timeline-content">
+                            <h3>Towards Publication</h3>
+                            <p>Goal: Secure representation and move toward publication. Preparing for the next phase of the author journey.</p>
+                            <div class="timeline-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <!-- Blog Post 2 -->
-                <div class="masonry-item scroll-animate">
-                    <div class="blog-card">
-                        <div class="blog-image water-bg">
-                            <span class="blog-category">Visionary Bridges</span>
+            </div>
+            
+            <div class="writing-process">
+                <h3>The Creative Process</h3>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Research & Immersion</h4>
+                            <p>Deep dive into Kenyan landscapes, ancestral traditions, and the sensory experience of flight.</p>
                         </div>
-                        <h3 class="blog-title">From Hospitality to World-Building</h3>
-                        <p class="blog-excerpt">The unexpected connections between high-touch service and immersive storytelling, and how my hospitality background informs my world-building...</p>
-                        <button class="blog-read-more">Read More →</button>
                     </div>
-                </div>
-
-                <!-- Blog Post 3 -->
-                <div class="masonry-item scroll-animate">
-                    <div class="blog-card">
-                        <div class="blog-image transform-bg">
-                            <span class="blog-category">Transformation</span>
+                    
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Character Development</h4>
+                            <p>Crafting Sekou's emotional arc from fractured flight attendant to integrated whole self.</p>
                         </div>
-                        <h3 class="blog-title">Navigating the Saturn Return</h3>
-                        <p class="blog-excerpt">Personal reflections on reinvention and creative rebirth during pivotal life transitions, and how these experiences shaped The Phoenix Covenant...</p>
-                        <button class="blog-read-more">Read More →</button>
                     </div>
-                </div>
-
-                <!-- Blog Post 4 -->
-                <div class="masonry-item scroll-animate">
-                    <div class="blog-card">
-                        <div class="blog-image character-bg">
-                            <span class="blog-category">Character Arcs</span>
+                    
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Revision & Polishing</h4>
+                            <p>Multiple drafts focusing on voice, pacing, and the balance between realism and magic.</p>
                         </div>
-                        <h3 class="blog-title">The Architecture of Transformation</h3>
-                        <p class="blog-excerpt">Exploring how I structure character development in The Phoenix Covenant, drawing from my own journey of personal and professional transformation...</p>
-                        <button class="blog-read-more">Read More →</button>
                     </div>
-                </div>
-
-                <!-- Blog Post 5 -->
-                <div class="masonry-item scroll-animate">
-                    <div class="blog-card">
-                        <div class="blog-image writing-bg">
-                            <span class="blog-category">Writing Process</span>
+                    
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Seeking Publication</h4>
+                            <p>Preparing query letters, synopsis, and sample pages for literary agents.</p>
                         </div>
-                        <h3 class="blog-title">Balancing Fire and Water in Creativity</h3>
-                        <p class="blog-excerpt">How I maintain the balance between passionate inspiration (Fire) and disciplined execution (Water) in my writing process...</p>
-                        <button class="blog-read-more">Read More →</button>
-                    </div>
-                </div>
-
-                <!-- Blog Post 6 -->
-                <div class="masonry-item scroll-animate">
-                    <div class="blog-card">
-                        <div class="blog-image journey-bg">
-                            <span class="blog-category">Author's Journey</span>
-                        </div>
-                        <h3 class="blog-title">From Aviation to Authorship</h3>
-                        <p class="blog-excerpt">The surprising parallels between my career in aviation and my journey as an author, and how both require attention to detail and big-picture vision...</p>
-                        <button class="blog-read-more">Read More →</button>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <!-- Section Divider -->
-        <div class="section-divider"></div>
-    </section>
-
-    <!-- Speaking Section -->
-    <section id="speaking" class="speaking section-padding">
-        <div class="container">
-            <h2 class="section-title">Speaking & Workshops</h2>
-            <p class="section-subtitle">Transforming Organizations Through Visionary Leadership</p>
-            
-            <div class="speaking-grid">
-                <div class="speaking-card scroll-animate">
-                    <h3 class="speaking-card-title">Keynote Topics</h3>
-                    <ul class="topics-list">
-                        <li class="topic-item">
-                            <span class="topic-bullet">•</span>
-                            <span class="topic-text">The Visionary Bridge: Blending Human Empathy with Technical Excellence</span>
-                        </li>
-                        <li class="topic-item">
-                            <span class="topic-bullet">•</span>
-                            <span class="topic-text">Navigating Your Saturn Return: Transformative Leadership in Times of Change</span>
-                        </li>
-                        <li class="topic-item">
-                            <span class="topic-bullet">•</span>
-                            <span class="topic-text">From Hospitality to Innovation: Creating Emotional Safety in High-Pressure Environments</span>
-                        </li>
-                        <li class="topic-item">
-                            <span class="topic-bullet">•</span>
-                            <span class="topic-text">The Phoenix Covenant: Rebirth and Reinvention in Business and Life</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="speaking-card scroll-animate">
-                    <h3 class="speaking-card-title">Book Hussein</h3>
-                    <p class="speaking-description">Available for corporate events, conferences, and leadership workshops worldwide.</p>
-                    <div class="speaking-buttons">
-                        <a href="#contact" class="btn btn-primary btn-full">Inquire About Speaking</a>
-                        <button class="btn btn-outline speaker-kit">Download Speaker Kit</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Section Divider -->
-        <div class="section-divider"></div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact section-padding">
         <div class="container">
-            <h2 class="section-title">Connect</h2>
-            <p class="section-subtitle">Build Bridges Between Worlds</p>
+            <div class="section-header">
+                <h2 class="section-title">Connect</h2>
+                <p class="section-subtitle">Literary Inquiries & Conversations</p>
+            </div>
             
             <div class="contact-grid">
                 <!-- Contact Form -->
-                <div class="contact-form-container scroll-animate">
+                <div class="contact-form-container">
                     <h3 class="contact-form-title">Send a Message</h3>
-                    <form class="contact-form">
+                    <form class="contact-form" id="contactForm">
                         <div class="form-group">
                             <label class="form-label">Name *</label>
-                            <input type="text" required class="form-input contact-name">
+                            <input type="text" required class="form-input" id="contactName" placeholder="Your name">
                         </div>
+                        
                         <div class="form-group">
                             <label class="form-label">Email *</label>
-                            <input type="email" required class="form-input contact-email">
+                            <input type="email" required class="form-input" id="contactEmail" placeholder="Your email address">
                         </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Subject</label>
+                            <select class="form-input" id="contactSubject">
+                                <option value="">Select a topic</option>
+                                <option value="literary">Literary Agent Inquiry</option>
+                                <option value="publishing">Publishing Inquiry</option>
+                                <option value="speaking">Speaking Engagement</option>
+                                <option value="general">General Message</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
                         <div class="form-group">
                             <label class="form-label">Message *</label>
-                            <textarea required class="form-textarea contact-message" placeholder="Share your thoughts or inquiries..."></textarea>
+                            <textarea required class="form-textarea" id="contactMessage" placeholder="Your message..." rows="5"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-full contact-submit">Send Message</button>
+                        
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                        
+                        <div class="form-status" id="formStatus"></div>
                     </form>
                 </div>
-
-                <!-- Social Links & Info -->
-                <div class="social-container scroll-animate">
-                    <h3 class="social-title">Find Me Online</h3>
-                    <div class="social-links">
-                        <a href="#" data-social="facebook" class="social-link">
-                            <span class="social-icon">📘</span>
-                            <span class="social-text">Facebook Author Page</span>
-                        </a>
-                        <a href="#" data-social="twitter" class="social-link">
-                            <span class="social-icon">🐦</span>
-                            <span class="social-text">Twitter / X</span>
-                        </a>
-                        <a href="#" data-social="instagram" class="social-link">
-                            <span class="social-icon">📸</span>
-                            <span class="social-text">Instagram</span>
-                        </a>
-                        <a href="#" data-social="linkedin" class="social-link">
-                            <span class="social-icon">💼</span>
-                            <span class="social-text">LinkedIn</span>
-                        </a>
-                        <a href="#" data-social="goodreads" class="social-link">
-                            <span class="social-icon">📚</span>
-                            <span class="social-text">Goodreads Author Profile</span>
-                        </a>
+                
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <h3 class="contact-info-title">Get In Touch</h3>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="method-content">
+                                <h4>Email</h4>
+                                <p>For literary inquiries and professional correspondence</p>
+                                <a href="mailto:contact@husseinsalim.com" class="method-link">contact@husseinsalim.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-book-open"></i>
+                            </div>
+                            <div class="method-content">
+                                <h4>Literary Agents</h4>
+                                <p><em>The Red Path</em> is currently seeking representation. Interested agents may request the full manuscript.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-microphone"></i>
+                            </div>
+                            <div class="method-content">
+                                <h4>Speaking</h4>
+                                <p>Available for literary events, writing workshops, and talks on storytelling, heritage, and creative process.</p>
+                            </div>
+                        </div>
                     </div>
                     
-                    <div class="literary-info">
-                        <h4 class="info-title">Literary Inquiries</h4>
-                        <p class="info-text">
-                            For publishing, speaking engagements, or media requests, please use the contact form.
-                        </p>
+                    <div class="social-links">
+                        <h4>Connect Online</h4>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-icon" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="social-icon" aria-label="Goodreads">
+                                <i class="fab fa-goodreads"></i>
+                            </a>
+                            <a href="#" class="social-icon" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -506,13 +555,66 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p class="footer-text">&copy; 2024 Hussein Salim. All rights reserved.</p>
-                <p class="footer-tagline">Crafting stories that transform and inspire</p>
+                <div class="footer-brand">
+                    <h3 class="footer-logo">HUSSEIN SALIM</h3>
+                    <p class="footer-tagline">Crafting stories that bridge worlds and heal divides</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <a href="#home" class="footer-link">Home</a>
+                        <a href="#about" class="footer-link">About</a>
+                        <a href="#books" class="footer-link">The Red Path</a>
+                        <a href="#journey" class="footer-link">Writing Journey</a>
+                        <a href="#contact" class="footer-link">Contact</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>The Book</h4>
+                        <a href="#books" class="footer-link">Synopsis</a>
+                        <a href="#contact" class="footer-link">Literary Inquiries</a>
+                        <a href="#contact" class="footer-link">Sample Request</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Connect</h4>
+                        <a href="#contact" class="footer-link">Contact Form</a>
+                        <a href="#" class="footer-link">Twitter</a>
+                        <a href="#" class="footer-link">Goodreads</a>
+                        <a href="#contact" class="footer-link">Speaking</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2024 Hussein Salim. All rights reserved.</p>
+                <p class="footer-note"><em>The Red Path</em> is a work of fiction. All characters and events are products of the author's imagination.</p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script src="js/main.js"></script>
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Modal for Book Zoom -->
+    <div class="modal" id="bookModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-body">
+                <div class="book-cover-large">
+                    <h3>THE RED PATH</h3>
+                    <p>by HUSSEIN SALIM</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript will be embedded here
+        // (See the JavaScript section below)
+    </script>
 </body>
 </html>
