@@ -7,14 +7,29 @@
     <meta name="keywords" content="Hussein Salim, The Red Path, author, speaker, Kenyan author, literary fiction, magical realism, ancestry, grief, transformation">
     <title>Hussein Salim - Kenyan Author & Speaker | The Red Path</title>
     
-    <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✍️</text></svg>">
-    
+    <!-- Favicon Links -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="icon" href="images/favicon.ico">
+
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#c9b388">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Hussein Salim - Kenyan Author & Speaker">
+    <meta property="og:title" content="Hussein Salim - Kenyan Author & Speaker | The Red Path">
     <meta property="og:description" content="Author of The Red Path. Exploring the spaces between migration and belonging, grief and healing.">
     <meta property="og:type" content="website">
-    
+    <meta property="og:image" content="images/hussein-og.jpg">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hussein Salim - Kenyan Author & Speaker">
+    <meta name="twitter:description" content="Author of The Red Path. Exploring ancestry, grief, and transformation.">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,9 +38,8 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <style>
-        /* CSS will be embedded here for simplicity */
-    </style>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- Loading Screen -->
@@ -39,9 +53,8 @@
     <!-- Navigation -->
     <nav id="navbar" class="navbar">
         <div class="nav-container">
-            <a href="#home" class="nav-logo">
-                <span class="logo-text">HUSSEIN SALIM</span>
-                <span class="logo-subtext">Author</span>
+            <a href="#home" class="nav-logo" aria-label="Hussein Salim home">
+                <img src="images/logo.png" srcset="images/logo@2x.png 2x" alt="Hussein Salim" class="nav-logo-image">
             </a>
             
             <div class="nav-menu">
@@ -49,10 +62,8 @@
                 <a href="#about" class="nav-link"><i class="fas fa-user"></i> About</a>
                 <a href="#books" class="nav-link"><i class="fas fa-book"></i> Books</a>
                 <a href="#journey" class="nav-link"><i class="fas fa-road"></i> The Journey</a>
+                <a href="#blog" class="nav-link"><i class="fas fa-blog"></i> Blog</a>
                 <a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
-                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-                    <i class="fas fa-moon"></i>
-                </button>
             </div>
             
             <button class="nav-toggle" aria-label="Toggle navigation">
@@ -66,18 +77,15 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-background">
-            <canvas id="particleCanvas"></canvas>
-            <div class="hero-overlay"></div>
+            <div class="particle particle-1"></div>
+            <div class="particle particle-2"></div>
+            <div class="particle particle-3"></div>
         </div>
         
         <div class="container hero-content">
             <div class="hero-text">
-                <h1 class="hero-title">
-                    <span class="title-line">Hussein</span>
-                    <span class="title-line">Salim</span>
-                </h1>
-                
-                <p class="hero-subtitle">Kenyan Author • Speaker • Storyteller</p>
+                <h1 class="hero-title">Hussein Salim</h1>
+                <p class="hero-subtitle">Author • Speaker • Visionary Bridge</p>
                 
                 <div class="hero-card">
                     <p class="hero-card-text">Author of the forthcoming novel</p>
@@ -113,10 +121,7 @@
             <div class="author-grid">
                 <div class="author-image-container">
                     <div class="author-frame">
-                        <div class="author-image-placeholder">
-                            <div class="author-initials">HS</div>
-                            <p class="author-image-text">Author Photo</p>
-                        </div>
+                        <img src="images/hussein.jpeg" alt="Hussein Salim - Kenyan Author" class="author-photo">
                         <div class="author-badge">
                             <i class="fas fa-pen-nib"></i>
                             <span>Debut Author</span>
@@ -319,33 +324,6 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- Bookshelf -->
-            <div class="bookshelf-section">
-                <h3 class="bookshelf-title">The Literary Journey</h3>
-                <div class="bookshelf">
-                    <div class="book-spine active" data-book="redpath">
-                        <span class="spine-title">THE RED PATH</span>
-                        <span class="spine-year">2024</span>
-                    </div>
-                    <div class="book-spine" data-book="phoenix">
-                        <span class="spine-title">THE PHOENIX COVENANT</span>
-                        <span class="spine-year">2023</span>
-                    </div>
-                    <div class="book-spine" data-book="future1">
-                        <span class="spine-title">UNTITLED</span>
-                        <span class="spine-year">2025</span>
-                    </div>
-                    <div class="book-spine" data-book="future2">
-                        <span class="spine-title">UNTITLED</span>
-                        <span class="spine-year">2026</span>
-                    </div>
-                </div>
-                
-                <div id="book-details-container">
-                    <!-- Dynamic content will appear here -->
-                </div>
-            </div>
         </div>
     </section>
 
@@ -404,47 +382,70 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Visionary Writings</h2>
+                <p class="section-subtitle">Insights, Stories & Transformative Ideas</p>
+            </div>
             
-            <div class="writing-process">
-                <h3>The Creative Process</h3>
-                <div class="process-steps">
-                    <div class="process-step">
-                        <div class="step-number">1</div>
-                        <div class="step-content">
-                            <h4>Research & Immersion</h4>
-                            <p>Deep dive into Kenyan landscapes, ancestral traditions, and the sensory experience of flight.</p>
+            <div class="masonry-grid">
+                <!-- Blog Post 1 -->
+                <div class="masonry-item scroll-animate">
+                    <div class="blog-card">
+                        <div class="blog-image fire-bg">
+                            <span class="blog-category">The Fire Within</span>
                         </div>
+                        <h3 class="blog-title">Crafting Elemental Magic Systems</h3>
+                        <p class="blog-excerpt">How I blend Fire and Water symbolism into The Red Path's magic system, creating a unique approach to elemental powers...</p>
+                        <button class="blog-read-more">Read More →</button>
                     </div>
-                    
-                    <div class="process-step">
-                        <div class="step-number">2</div>
-                        <div class="step-content">
-                            <h4>Character Development</h4>
-                            <p>Crafting Sekou's emotional arc from fractured flight attendant to integrated whole self.</p>
+                </div>
+
+                <!-- Blog Post 2 -->
+                <div class="masonry-item scroll-animate">
+                    <div class="blog-card">
+                        <div class="blog-image water-bg">
+                            <span class="blog-category">Writing Process</span>
                         </div>
+                        <h3 class="blog-title">From Aviation to Authorship</h3>
+                        <p class="blog-excerpt">The surprising parallels between my career in aviation and my journey as an author, and how both require attention to detail and big-picture vision...</p>
+                        <button class="blog-read-more">Read More →</button>
                     </div>
-                    
-                    <div class="process-step">
-                        <div class="step-number">3</div>
-                        <div class="step-content">
-                            <h4>Revision & Polishing</h4>
-                            <p>Multiple drafts focusing on voice, pacing, and the balance between realism and magic.</p>
+                </div>
+
+                <!-- Blog Post 3 -->
+                <div class="masonry-item scroll-animate">
+                    <div class="blog-card">
+                        <div class="blog-image transform-bg">
+                            <span class="blog-category">Transformation</span>
                         </div>
+                        <h3 class="blog-title">Navigating the Saturn Return</h3>
+                        <p class="blog-excerpt">Personal reflections on reinvention and creative rebirth during pivotal life transitions, and how these experiences shaped The Red Path...</p>
+                        <button class="blog-read-more">Read More →</button>
                     </div>
-                    
-                    <div class="process-step">
-                        <div class="step-number">4</div>
-                        <div class="step-content">
-                            <h4>Seeking Publication</h4>
-                            <p>Preparing query letters, synopsis, and sample pages for literary agents.</p>
+                </div>
+
+                <!-- Blog Post 4 -->
+                <div class="masonry-item scroll-animate">
+                    <div class="blog-card">
+                        <div class="blog-image character-bg">
+                            <span class="blog-category">Character Arcs</span>
                         </div>
+                        <h3 class="blog-title">The Architecture of Transformation</h3>
+                        <p class="blog-excerpt">Exploring how I structure character development in The Red Path, drawing from my own journey of personal and professional transformation...</p>
+                        <button class="blog-read-more">Read More →</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact Section with Netlify Forms -->
     <section id="contact" class="contact section-padding">
         <div class="container">
             <div class="section-header">
@@ -453,38 +454,49 @@
             </div>
             
             <div class="contact-grid">
-                <!-- Contact Form -->
-                <div class="contact-form-container">
+                <!-- Contact Form with Netlify Forms -->
+                <div class="contact-form-container scroll-animate">
                     <h3 class="contact-form-title">Send a Message</h3>
-                    <form class="contact-form" id="contactForm">
+                    
+                    <!-- NETLIFY FORM - Replace with your Netlify settings -->
+                    <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                        <!-- Hidden Netlify form name -->
+                        <input type="hidden" name="form-name" value="contact">
+                        
+                        <!-- Honeypot spam field (hidden from users) -->
+                        <p class="hidden">
+                            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                        </p>
+                        
                         <div class="form-group">
                             <label class="form-label">Name *</label>
-                            <input type="text" required class="form-input" id="contactName" placeholder="Your name">
+                            <input type="text" name="name" required class="form-input" placeholder="Your name">
                         </div>
                         
                         <div class="form-group">
                             <label class="form-label">Email *</label>
-                            <input type="email" required class="form-input" id="contactEmail" placeholder="Your email address">
+                            <input type="email" name="email" required class="form-input" placeholder="Your email address">
                         </div>
                         
                         <div class="form-group">
-                            <label class="form-label">Subject</label>
-                            <select class="form-input" id="contactSubject">
+                            <label class="form-label">Subject *</label>
+                            <select name="subject" class="form-input" required>
                                 <option value="">Select a topic</option>
-                                <option value="literary">Literary Agent Inquiry</option>
-                                <option value="publishing">Publishing Inquiry</option>
+                                <option value="literary-agent">Literary Agent Inquiry</option>
+                                <option value="publisher">Publisher Inquiry</option>
                                 <option value="speaking">Speaking Engagement</option>
-                                <option value="general">General Message</option>
+                                <option value="collaboration">Collaboration Request</option>
+                                <option value="reader">Reader Question</option>
                                 <option value="other">Other</option>
                             </select>
                         </div>
                         
                         <div class="form-group">
                             <label class="form-label">Message *</label>
-                            <textarea required class="form-textarea" id="contactMessage" placeholder="Your message..." rows="5"></textarea>
+                            <textarea name="message" required class="form-textarea" placeholder="Your message..." rows="5"></textarea>
                         </div>
                         
-                        <button type="submit" class="btn btn-primary btn-full">
+                        <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
                             <i class="fas fa-paper-plane"></i> Send Message
                         </button>
                         
@@ -493,7 +505,7 @@
                 </div>
                 
                 <!-- Contact Info -->
-                <div class="contact-info">
+                <div class="contact-info scroll-animate">
                     <h3 class="contact-info-title">Get In Touch</h3>
                     
                     <div class="contact-methods">
@@ -532,16 +544,16 @@
                     <div class="social-links">
                         <h4>Connect Online</h4>
                         <div class="social-icons">
-                            <a href="#" class="social-icon" aria-label="Twitter">
+                            <a href="https://twitter.com/husseinsalim" class="social-icon" aria-label="Twitter" target="_blank">
                                 <i class="fab fa-twitter"></i>
                             </a>
-                            <a href="#" class="social-icon" aria-label="LinkedIn">
+                            <a href="https://linkedin.com/in/husseinsalim" class="social-icon" aria-label="LinkedIn" target="_blank">
                                 <i class="fab fa-linkedin-in"></i>
                             </a>
-                            <a href="#" class="social-icon" aria-label="Goodreads">
+                            <a href="https://goodreads.com/author/hussein-salim" class="social-icon" aria-label="Goodreads" target="_blank">
                                 <i class="fab fa-goodreads"></i>
                             </a>
-                            <a href="#" class="social-icon" aria-label="Instagram">
+                            <a href="https://instagram.com/husseinsalim.author" class="social-icon" aria-label="Instagram" target="_blank">
                                 <i class="fab fa-instagram"></i>
                             </a>
                         </div>
@@ -580,15 +592,15 @@
                     <div class="footer-column">
                         <h4>Connect</h4>
                         <a href="#contact" class="footer-link">Contact Form</a>
-                        <a href="#" class="footer-link">Twitter</a>
-                        <a href="#" class="footer-link">Goodreads</a>
+                        <a href="https://twitter.com/husseinsalim" class="footer-link" target="_blank">Twitter</a>
+                        <a href="https://goodreads.com/author/hussein-salim" class="footer-link" target="_blank">Goodreads</a>
                         <a href="#contact" class="footer-link">Speaking</a>
                     </div>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p class="copyright">&copy; 2024 Hussein Salim. All rights reserved.</p>
+                <p class="copyright">&copy; <span id="currentYear"></span> Hussein Salim. All rights reserved.</p>
                 <p class="footer-note"><em>The Red Path</em> is a work of fiction. All characters and events are products of the author's imagination.</p>
             </div>
         </div>
@@ -599,22 +611,7 @@
         <i class="fas fa-chevron-up"></i>
     </button>
 
-    <!-- Modal for Book Zoom -->
-    <div class="modal" id="bookModal">
-        <div class="modal-content">
-            <button class="modal-close" id="modalClose">&times;</button>
-            <div class="modal-body">
-                <div class="book-cover-large">
-                    <h3>THE RED PATH</h3>
-                    <p>by HUSSEIN SALIM</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        // JavaScript will be embedded here
-        // (See the JavaScript section below)
-    </script>
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
 </body>
 </html>
