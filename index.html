@@ -303,7 +303,6 @@ footer {
         </div>
     </header>
 
-```
 <main class="container">
     <!-- Home Section -->
     <section id="home">
@@ -462,41 +461,40 @@ footer {
     <p>&copy; <span id="year"></span> Hussein Salim. All rights reserved.</p>
 </footer>
 
-<script>
-    // Set current year
-    document.getElementById('year').textContent = new Date().getFullYear();
+    <script>
+        // Set current year
+        document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Mobile menu toggle
-    const navToggle = document.getElementById('navToggle');
-    const navMenu = document.getElementById('navMenu');
+        // Mobile menu toggle
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
 
-    navToggle.addEventListener('click', function() {
-        navMenu.classList.toggle('active');
-    });
-
-    // Close menu when clicking on a link
-    document.querySelectorAll('#navMenu a').forEach(link => {
-        link.addEventListener('click', function() {
-            navMenu.classList.remove('active');
+        navToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
         });
-    });
 
-    // Close menu when clicking outside
-    document.addEventListener('click', function(e) {
-        if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
-            navMenu.classList.remove('active');
-        }
-    });
+        // Close menu when clicking on a link
+        document.querySelectorAll('#navMenu a').forEach(link => {
+            link.addEventListener('click', function() {
+                navMenu.classList.remove('active');
+            });
+        });
 
-    // Simple Brevo form handling (basic implementation)
-    document.getElementById('brevo-form').addEventListener('submit', function(e) {
-        e.preventDefault();
-        const email = this.querySelector('input[type="email"]').value;
-        alert('Thank you for subscribing! Check your email for confirmation.');
-        this.reset();
-    });
-</script>
-```
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
+                navMenu.classList.remove('active');
+            }
+        });
+
+        // Simple Brevo form handling (basic implementation)
+        document.getElementById('brevo-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input[type="email"]').value;
+            alert('Thank you for subscribing! Check your email for confirmation.');
+            this.reset();
+        });
+    </script>
 
 </body>
 </html>
