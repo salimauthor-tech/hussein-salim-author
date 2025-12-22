@@ -1,6 +1,8 @@
 # Hussein Salim – Author
 
-Official author website for Hussein Salim, featuring his published and forthcoming literary work.
+Official author platform for Hussein Salim, featuring his published and forthcoming literary work.
+
+**Live:** https://husseinsalim.netlify.app
 
 ## About
 
@@ -35,7 +37,7 @@ A quiet exploration of intimacy, misunderstanding, and the cost of using stillne
 
 A metaphysical journey through collapse and reconstruction. When a man loses everything—his mother, his career, his identity—he is forced to confront what remains when all external scaffolding falls away. A story about spiritual audits, transformation, and the fire that reveals what cannot be destroyed.
 
-## Website Features
+## Platform Features
 
 - **Minimalist Design** — Clean, restrained aesthetic matching the author’s voice
 - **Fully Responsive** — Works seamlessly on desktop, tablet, and mobile
@@ -48,7 +50,7 @@ A metaphysical journey through collapse and reconstruction. When a man loses eve
 
 ```
 hussein-salim-author/
-├── index.html          # Complete website (single page)
+├── index.html          # Complete platform (single page)
 ├── author.jpg          # Author photograph
 ├── README.md           # This file
 └── .gitignore          # Git configuration
@@ -82,27 +84,19 @@ hussein-salim-author/
 
 ## Deployment
 
-### GitHub Pages (Recommended)
+**Current:** Netlify  
+**Live URL:** https://husseinsalim.netlify.app
 
-1. Create GitHub account at [github.com](https://github.com)
-1. Create new repository: `yourusername.github.io`
-1. Upload `index.html` and `author.jpg`
-1. Enable Pages in repository Settings
-1. Site goes live at `https://yourusername.github.io`
+### To Update This Site
 
-**No cost. No dependencies. Automatic deployments.**
-
-### Custom Domain (Later)
-
-When you purchase a domain:
-
-1. Point domain DNS to GitHub Pages
-1. Add CNAME record in repository Settings
-1. No disruption to existing site
+1. Update files locally (`index.html`, `author.jpg`, `README.md`)
+1. Push to connected GitHub repository, or
+1. Drag updated files to Netlify deploy area
+1. Site updates automatically within 1-2 minutes
 
 ### Alternative Hosting
 
-- **Netlify** — Drag-and-drop deployment (free tier available)
+- **GitHub Pages** — Free, permanent, no build process
 - **Vercel** — Git-based deployment
 - **Traditional Web Host** — FTP upload
 
