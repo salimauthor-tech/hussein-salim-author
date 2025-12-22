@@ -1,9 +1,10 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Hussein Salim - Author of literary fiction exploring silence, grief, identity, and inner transformation.">
+    <meta name="description" content="Hussein Salim - Literary author exploring silence, grief, identity, and inner transformation.">
     <meta name="keywords" content="Hussein Salim, author, literary fiction, The Silence That Changed Everything, The Stillness Between Us, The Phoenix Covenant">
     <meta property="og:title" content="Hussein Salim - Author">
     <meta property="og:description" content="Literary fiction exploring silence, grief, identity, and the unseen structures that shape inner life.">
@@ -16,411 +17,555 @@
             box-sizing: border-box;
         }
 
-        :root {
-            --bg-dark: #0f0f0f;
-            --bg-light: #1a1a1a;
-            --text-primary: #ffffff;
-            --text-secondary: #b0b0b0;
-            --accent: #c9b388;
-            --border: #333333;
-        }
+```
+    :root {
+        --bg-dark: #0f0f0f;
+        --bg-light: #1a1a1a;
+        --text-primary: #ffffff;
+        --text-secondary: #b0b0b0;
+        --accent: #c9b388;
+        --border: #333333;
+    }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            background-color: var(--bg-dark);
-            color: var(--text-primary);
-            line-height: 1.6;
-            font-size: 16px;
-        }
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        background-color: var(--bg-dark);
+        color: var(--text-primary);
+        line-height: 1.6;
+        font-size: 16px;
+    }
 
-        header {
-            border-bottom: 1px solid var(--border);
-            padding: 2rem 0;
-            position: sticky;
-            top: 0;
-            background: rgba(15, 15, 15, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 100;
-        }
+    header {
+        border-bottom: 1px solid var(--border);
+        padding: 1.5rem 0;
+        position: sticky;
+        top: 0;
+        background: rgba(15, 15, 15, 0.98);
+        backdrop-filter: blur(15px);
+        z-index: 100;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
 
-        .header-content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    .header-content {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 60px;
+    }
 
-        .logo {
-            font-size: 1.25rem;
-            font-weight: 600;
-            letter-spacing: 1px;
-            color: var(--text-primary);
-            text-decoration: none;
-        }
+    .logo {
+        font-size: 1.3rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        color: var(--accent);
+        text-decoration: none;
+        transition: color 0.3s ease;
+        text-transform: uppercase;
+    }
 
-        nav a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            margin-left: 2rem;
-            font-size: 0.95rem;
-            transition: color 0.3s ease;
-        }
+    .logo:hover {
+        color: var(--text-primary);
+    }
 
-        nav a:hover {
-            color: var(--accent);
-        }
+    nav {
+        display: flex;
+        gap: 2.5rem;
+        align-items: center;
+    }
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
+    nav a {
+        color: var(--text-secondary);
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        transition: all 0.3s ease;
+        position: relative;
+    }
 
-        section {
-            padding: 4rem 0;
-            border-bottom: 1px solid var(--border);
-        }
+    nav a:hover {
+        color: var(--accent);
+    }
 
-        section:last-of-type {
-            border-bottom: none;
-        }
+    nav a::after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: var(--accent);
+        transition: width 0.3s ease;
+    }
 
+    nav a:hover::after {
+        width: 100%;
+    }
+
+    .nav-toggle {
+        display: none;
+        background: none;
+        border: none;
+        color: var(--accent);
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+    }
+
+    .nav-toggle:focus {
+        outline: none;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    section {
+        padding: 4rem 0;
+        border-bottom: 1px solid var(--border);
+    }
+
+    section:last-of-type {
+        border-bottom: none;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+        font-weight: 400;
+        letter-spacing: -0.5px;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+        margin-bottom: 1.5rem;
+        font-weight: 400;
+        letter-spacing: -0.5px;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+        margin-bottom: 0.75rem;
+        font-weight: 500;
+    }
+
+    p {
+        color: var(--text-secondary);
+        margin-bottom: 1rem;
+    }
+
+    /* Hero Section */
+    #home {
+        padding-top: 8rem;
+        padding-bottom: 5rem;
+        position: relative;
+        background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #0f0f0f 100%);
+        overflow: hidden;
+    }
+
+    #home::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: 
+            radial-gradient(circle at 20% 50%, rgba(201, 179, 136, 0.05) 0%, transparent 50%),
+            radial-gradient(circle at 80% 80%, rgba(201, 179, 136, 0.05) 0%, transparent 50%);
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 1;
+    }
+
+    .hero-subtitle {
+        color: var(--accent);
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        border: 1px solid var(--accent);
+        border-radius: 50px;
+        opacity: 0.9;
+    }
+
+    #home h1 {
+        font-size: clamp(2.5rem, 8vw, 4rem);
+        line-height: 1.15;
+        margin-bottom: 1.5rem;
+        font-weight: 400;
+        letter-spacing: -1px;
+        background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .bio-intro {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: var(--text-secondary);
+        margin-bottom: 1.5rem;
+        max-width: 700px;
+        font-weight: 300;
+        letter-spacing: 0.3px;
+    }
+
+    .hero-cta {
+        display: flex;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        margin-top: 2.5rem;
+    }
+
+    .hero-cta .btn {
+        font-size: 0.95rem;
+        padding: 1rem 2rem;
+        letter-spacing: 0.5px;
+        font-weight: 600;
+    }
+
+    .scroll-indicator {
+        position: absolute;
+        bottom: 3rem;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+        animation: bounce 2s infinite;
+    }
+
+    .scroll-line {
+        width: 1px;
+        height: 40px;
+        background: linear-gradient(to bottom, var(--accent), transparent);
+    }
+
+    .scroll-text {
+        color: var(--accent);
+        font-size: 0.75rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+
+    @keyframes bounce {
+        0%, 100% {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+        50% {
+            opacity: 0.5;
+            transform: translateX(-50%) translateY(10px);
+        }
+    }
+
+    /* Books Section */
+    .books-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .book-card {
+        background: var(--bg-light);
+        border: 1px solid var(--border);
+        padding: 2rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .book-card:hover {
+        border-color: var(--accent);
+        transform: translateY(-2px);
+    }
+
+    .book-status {
+        color: var(--accent);
+        font-size: 0.85rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+    }
+
+    .book-title {
+        font-size: 1.5rem;
+        margin-bottom: 0.75rem;
+        font-weight: 500;
+        line-height: 1.3;
+    }
+
+    .book-description {
+        color: var(--text-secondary);
+        font-size: 0.95rem;
+        line-height: 1.7;
+        margin-bottom: 1.5rem;
+        flex-grow: 1;
+    }
+
+    .book-meta {
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+        margin-bottom: 1.5rem;
+    }
+
+    .book-links {
+        display: flex;
+        gap: 1rem;
+        margin-top: auto;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        background: var(--accent);
+        color: var(--bg-dark);
+        text-decoration: none;
+        border: none;
+        border-radius: 4px;
+        font-weight: 500;
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-align: center;
+        flex: 1;
+    }
+
+    .btn:hover {
+        background: #d4c5a0;
+        transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+        background: transparent;
+        color: var(--accent);
+        border: 1px solid var(--accent);
+    }
+
+    .btn-secondary:hover {
+        background: var(--accent);
+        color: var(--bg-dark);
+    }
+
+    /* About Section */
+    .about-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: start;
+    }
+
+    .about-photo-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .about-photo {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        border-radius: 4px;
+        border: 1px solid var(--border);
+        display: block;
+    }
+
+    .about-bio {
+        color: var(--text-secondary);
+        line-height: 1.8;
+    }
+
+    .about-bio p {
+        margin-bottom: 1.5rem;
+    }
+
+    .about-contact {
+        background: var(--bg-light);
+        border: 1px solid var(--border);
+        padding: 2rem;
+        border-radius: 4px;
+    }
+
+    .contact-item {
+        margin-bottom: 2rem;
+    }
+
+    .contact-item:last-child {
+        margin-bottom: 0;
+    }
+
+    .contact-label {
+        color: var(--accent);
+        font-weight: 600;
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+
+    .contact-value {
+        color: var(--text-secondary);
+        text-decoration: none;
+        word-break: break-all;
+    }
+
+    .contact-value:hover {
+        color: var(--accent);
+    }
+
+    /* Newsletter Section */
+    #newsletter {
+        background: var(--bg-light);
+        border: 1px solid var(--border);
+        padding: 3rem 2rem;
+        border-radius: 4px;
+        margin-top: 2rem;
+    }
+
+    #newsletter h2 {
+        margin-bottom: 1rem;
+    }
+
+    .newsletter-description {
+        color: var(--text-secondary);
+        margin-bottom: 2rem;
+        font-size: 0.95rem;
+    }
+
+    .brevo-form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .brevo-form input {
+        padding: 0.75rem;
+        background: var(--bg-dark);
+        border: 1px solid var(--border);
+        color: var(--text-primary);
+        border-radius: 4px;
+        font-size: 0.95rem;
+    }
+
+    .brevo-form input:focus {
+        outline: none;
+        border-color: var(--accent);
+        box-shadow: 0 0 0 2px rgba(201, 179, 136, 0.1);
+    }
+
+    .brevo-form button {
+        padding: 0.75rem;
+        background: var(--accent);
+        color: var(--bg-dark);
+        border: none;
+        border-radius: 4px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .brevo-form button:hover {
+        background: #d4c5a0;
+        transform: translateY(-2px);
+    }
+
+    /* Footer */
+    footer {
+        border-top: 1px solid var(--border);
+        padding: 2rem 0;
+        color: var(--text-secondary);
+        font-size: 0.85rem;
+        text-align: center;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
         h1 {
-            font-size: 2.5rem;
-            line-height: 1.2;
-            margin-bottom: 1rem;
-            font-weight: 400;
-            letter-spacing: -0.5px;
+            font-size: 2rem;
         }
 
         h2 {
-            font-size: 1.75rem;
-            margin-bottom: 1.5rem;
-            font-weight: 400;
-            letter-spacing: -0.5px;
+            font-size: 1.5rem;
         }
 
-        h3 {
-            font-size: 1.25rem;
-            margin-bottom: 0.75rem;
-            font-weight: 500;
+        .header-content {
+            flex-direction: column;
+            gap: 1.5rem;
         }
 
-        p {
-            color: var(--text-secondary);
-            margin-bottom: 1rem;
-        }
-
-        /* Hero Section */
-        #home {
-            padding-top: 6rem;
-            padding-bottom: 3rem;
-        }
-
-        .hero-subtitle {
-            color: var(--accent);
-            font-size: 1rem;
-            margin-bottom: 2rem;
-            font-weight: 500;
-            letter-spacing: 1px;
-        }
-
-        .bio-intro {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: var(--text-secondary);
-            margin-bottom: 2rem;
-        }
-
-        /* Books Section */
-        .books-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .book-card {
-            background: var(--bg-light);
-            border: 1px solid var(--border);
-            padding: 2rem;
-            border-radius: 4px;
-            transition: all 0.3s ease;
+        nav {
             display: flex;
             flex-direction: column;
-        }
-
-        .book-card:hover {
-            border-color: var(--accent);
-            transform: translateY(-2px);
-        }
-
-        .book-status {
-            color: var(--accent);
-            font-size: 0.85rem;
-            font-weight: 600;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            margin-bottom: 1rem;
-        }
-
-        .book-title {
-            font-size: 1.5rem;
-            margin-bottom: 0.75rem;
-            font-weight: 500;
-            line-height: 1.3;
-        }
-
-        .book-description {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            line-height: 1.7;
-            margin-bottom: 1.5rem;
-            flex-grow: 1;
-        }
-
-        .book-meta {
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-            margin-bottom: 1.5rem;
-        }
-
-        .book-links {
-            display: flex;
             gap: 1rem;
-            margin-top: auto;
         }
 
-        .btn {
-            display: inline-block;
-            padding: 0.75rem 1.5rem;
-            background: var(--accent);
-            color: var(--bg-dark);
-            text-decoration: none;
-            border: none;
-            border-radius: 4px;
-            font-weight: 500;
-            font-size: 0.9rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-align: center;
-            flex: 1;
+        nav a {
+            margin-left: 0;
         }
 
-        .btn:hover {
-            background: #d4c5a0;
-            transform: translateY(-2px);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--accent);
-            border: 1px solid var(--accent);
-        }
-
-        .btn-secondary:hover {
-            background: var(--accent);
-            color: var(--bg-dark);
-        }
-
-        /* About Section */
         .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: start;
-        }
-
-        .about-photo-container {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
+            grid-template-columns: 1fr;
+            gap: 2rem;
         }
 
         .about-photo {
-            width: 100%;
-            max-width: 400px;
-            height: auto;
-            border-radius: 4px;
-            border: 1px solid var(--border);
-            display: block;
+            max-width: 300px;
+            margin: 0 auto;
         }
 
-        .about-bio {
-            color: var(--text-secondary);
-            line-height: 1.8;
+        .books-grid {
+            grid-template-columns: 1fr;
         }
 
-        .about-bio p {
-            margin-bottom: 1.5rem;
+        section {
+            padding: 3rem 0;
         }
 
-        .about-contact {
-            background: var(--bg-light);
-            border: 1px solid var(--border);
-            padding: 2rem;
-            border-radius: 4px;
+        #home {
+            padding-top: 4rem;
         }
+    }
 
-        .contact-item {
-            margin-bottom: 2rem;
-        }
+    /* Utility */
+    .text-muted {
+        color: var(--text-secondary);
+    }
 
-        .contact-item:last-child {
-            margin-bottom: 0;
-        }
+    .highlight {
+        color: var(--accent);
+    }
+</style>
+```
 
-        .contact-label {
-            color: var(--accent);
-            font-weight: 600;
-            font-size: 0.9rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-
-        .contact-value {
-            color: var(--text-secondary);
-            text-decoration: none;
-            word-break: break-all;
-        }
-
-        .contact-value:hover {
-            color: var(--accent);
-        }
-
-        /* Newsletter Section */
-        #newsletter {
-            background: var(--bg-light);
-            border: 1px solid var(--border);
-            padding: 3rem 2rem;
-            border-radius: 4px;
-            margin-top: 2rem;
-        }
-
-        #newsletter h2 {
-            margin-bottom: 1rem;
-        }
-
-        .newsletter-description {
-            color: var(--text-secondary);
-            margin-bottom: 2rem;
-            font-size: 0.95rem;
-        }
-
-        .brevo-form {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .brevo-form input {
-            padding: 0.75rem;
-            background: var(--bg-dark);
-            border: 1px solid var(--border);
-            color: var(--text-primary);
-            border-radius: 4px;
-            font-size: 0.95rem;
-        }
-
-        .brevo-form input:focus {
-            outline: none;
-            border-color: var(--accent);
-            box-shadow: 0 0 0 2px rgba(201, 179, 136, 0.1);
-        }
-
-        .brevo-form button {
-            padding: 0.75rem;
-            background: var(--accent);
-            color: var(--bg-dark);
-            border: none;
-            border-radius: 4px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .brevo-form button:hover {
-            background: #d4c5a0;
-            transform: translateY(-2px);
-        }
-
-        /* Footer */
-        footer {
-            border-top: 1px solid var(--border);
-            padding: 2rem 0;
-            color: var(--text-secondary);
-            font-size: 0.85rem;
-            text-align: center;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-
-            h2 {
-                font-size: 1.5rem;
-            }
-
-            .header-content {
-                flex-direction: column;
-                gap: 1.5rem;
-            }
-
-            nav {
-                display: flex;
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            nav a {
-                margin-left: 0;
-            }
-
-            .about-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .about-photo {
-                max-width: 300px;
-                margin: 0 auto;
-            }
-
-            .books-grid {
-                grid-template-columns: 1fr;
-            }
-
-            section {
-                padding: 3rem 0;
-            }
-
-            #home {
-                padding-top: 4rem;
-            }
-        }
-
-        /* Utility */
-        .text-muted {
-            color: var(--text-secondary);
-        }
-
-        .highlight {
-            color: var(--accent);
-        }
-    </style>
 </head>
 <body>
-    <!-- Header -->
     <header>
         <div class="header-content">
             <a href="#home" class="logo">HUSSEIN SALIM</a>
-            <nav>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span>☰</span>
+            </button>
+            <nav id="navMenu">
                 <a href="#home">Home</a>
                 <a href="#books">Books</a>
                 <a href="#about">About</a>
@@ -429,144 +574,177 @@
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="container">
-        <!-- Home Section -->
-        <section id="home">
-            <div class="hero-subtitle">Literary Fiction</div>
-            <h1>Exploring silence, grief, and the structures of inner transformation.</h1>
-            <p class="bio-intro">
-                Hussein Salim is a writer whose work explores silence, grief, identity, and the unseen structures that shape inner life. His writing is marked by restraint, psychological precision, and a deep respect for stillness—not as absence, but as a place where meaning consolidates.
-            </p>
-            <p class="bio-intro text-muted">
-                Drawing from a life shaped by transition and reinvention, Hussein writes for readers navigating loss, uncertainty, and the search for grounded belonging in an accelerated world.
-            </p>
-        </section>
+```
+<!-- Main Content -->
+<main class="container">
+    <!-- Home Section -->
+    <section id="home">
+        <div class="hero-subtitle">Literary Fiction</div>
+        <h1>Exploring silence, grief, and the structures of inner transformation.</h1>
+        <p class="bio-intro">
+            Hussein Salim is a writer whose work explores silence, grief, identity, and the unseen structures that shape inner life. His writing is marked by restraint, psychological precision, and a deep respect for stillness—not as absence, but as a place where meaning consolidates.
+        </p>
+        <p class="bio-intro text-muted">
+            Drawing from a life shaped by transition and reinvention, Hussein writes for readers navigating loss, uncertainty, and the search for grounded belonging in an accelerated world.
+        </p>
 
-        <!-- Books Section -->
-        <section id="books">
-            <h2>Books</h2>
-            <div class="books-grid">
-                <!-- Book 1 -->
-                <div class="book-card">
-                    <span class="book-status">In Submission</span>
-                    <h3 class="book-title">The Silence That Changed Everything</h3>
-                    <p class="book-meta">Manuscript | Literary Fiction</p>
-                    <p class="book-description">
-                        A profound meditation on descent, grief, and the ground beneath us. Following a man's journey from altitude to earth—from the controlled silence of an airplane cabin to the silence of loss—this work explores what happens when external structures collapse and only stillness remains.
-                    </p>
-                    <div class="book-links">
-                        <a href="https://www.amazon.com/author/hussein-salim" class="btn btn-secondary">More Info</a>
-                    </div>
-                </div>
+        <div class="hero-cta">
+            <a href="#books" class="btn">Explore Books</a>
+            <a href="#newsletter" class="btn btn-secondary">Subscribe</a>
+        </div>
 
-                <!-- Book 2 -->
-                <div class="book-card">
-                    <span class="book-status">Published</span>
-                    <h3 class="book-title">The Stillness Between Us</h3>
-                    <p class="book-meta">Novella | Literary Fiction</p>
-                    <p class="book-description">
-                        A quiet exploration of intimacy, misunderstanding, and the cost of using stillness as both refuge and wall. When a flight attendant meets a woman whose peace mirrors his own, both discover that what looks like harmony from the outside may be incompatible at the core.
-                    </p>
-                    <div class="book-links">
-                        <a href="https://www.amazon.com/dp/B0DHJY0QLB" class="btn">Read on Amazon</a>
-                    </div>
-                </div>
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <p class="scroll-text">Scroll</p>
+        </div>
+    </div>
 
-                <!-- Book 3 -->
-                <div class="book-card">
-                    <span class="book-status">Published</span>
-                    <h3 class="book-title">The Phoenix Covenant</h3>
-                    <p class="book-meta">Novella | Literary Fiction</p>
-                    <p class="book-description">
-                        A metaphysical journey through collapse and reconstruction. When a man loses everything—his mother, his career, his identity—he is forced to confront what remains when all external scaffolding falls away. A story about Saturn Returns, spiritual audits, and the fire that reveals what cannot be destroyed.
-                    </p>
-                    <div class="book-links">
-                        <a href="https://www.amazon.com/dp/B0G52BLBZG" class="btn">Read on Amazon</a>
-                    </div>
+    <!-- Books Section -->
+    <section id="books">
+        <h2>Books</h2>
+        <div class="books-grid">
+            <!-- Book 1 -->
+            <div class="book-card">
+                <span class="book-status">In Submission</span>
+                <h3 class="book-title">The Silence That Changed Everything</h3>
+                <p class="book-meta">Manuscript | Literary Fiction</p>
+                <p class="book-description">
+                    A profound meditation on descent, grief, and the ground beneath us. Following a man's journey from altitude to earth—from the controlled silence of an airplane cabin to the silence of loss—this work explores what happens when external structures collapse and only stillness remains.
+                </p>
+                <div class="book-links">
+                    <a href="https://www.amazon.com/author/hussein-salim" class="btn btn-secondary">More Info</a>
                 </div>
             </div>
-        </section>
 
-        <!-- About Section -->
-        <section id="about">
-            <h2>About</h2>
-            <div class="about-content">
-                <div class="about-photo-container">
-                    <img src="images/author.jpg" alt="Hussein Salim" class="about-photo">
-                </div>
-                <div class="about-bio">
-                    <p>
-                        Hussein Salim writes introspective literary fiction that examines loss, emotional transformation, and the quiet thresholds where lives irrevocably shift.
-                    </p>
-                    <p>
-                        His work is characterized by restraint and psychological precision—a refusal to explain or sentimentalize, but rather to stand in the presence of what is difficult and real.
-                    </p>
-                    <p>
-                        Based in Kenya, he writes for readers navigating grief, uncertainty, and the search for grounded belonging in a world that often demands we move faster than we can actually endure.
-                    </p>
-                </div>
-                <div class="about-contact">
-                    <h3 style="margin-top: 0;">Contact</h3>
-                    <div class="contact-item">
-                        <span class="contact-label">Email</span>
-                        <a href="mailto:salimauthor@gmail.com" class="contact-value">salimauthor@gmail.com</a>
-                    </div>
-                    <div class="contact-item">
-                        <span class="contact-label">LinkedIn</span>
-                        <a href="https://www.linkedin.com/in/hussein-salim/" class="contact-value" target="_blank">linkedin.com/in/hussein-salim</a>
-                    </div>
-                    <div class="contact-item">
-                        <span class="contact-label">Amazon Author</span>
-                        <a href="https://www.amazon.com/author/hussein-salim" class="contact-value" target="_blank">amazon.com/author/hussein-salim</a>
-                    </div>
+            <!-- Book 2 -->
+            <div class="book-card">
+                <span class="book-status">Published</span>
+                <h3 class="book-title">The Stillness Between Us</h3>
+                <p class="book-meta">Novella | Literary Fiction</p>
+                <p class="book-description">
+                    A quiet exploration of intimacy, misunderstanding, and the cost of using stillness as both refuge and wall. When a flight attendant meets a woman whose peace mirrors his own, both discover that what looks like harmony from the outside may be incompatible at the core.
+                </p>
+                <div class="book-links">
+                    <a href="https://www.amazon.com/dp/B0DHJY0QLB" class="btn">Read on Amazon</a>
                 </div>
             </div>
-        </section>
 
-        <!-- Newsletter Section -->
-        <section id="newsletter">
-            <h2>Stay Updated</h2>
-            <p class="newsletter-description">
-                Rare, meaningful updates about new work, essays, and releases. No spam. No hype.
-            </p>
-            <!-- Brevo Embedded Form -->
-            <div class="brevo-form">
-                <form method="POST" action="https://api.brevo.com/v3/contacts" id="brevo-form">
-                    <input 
-                        type="email" 
-                        name="email" 
-                        placeholder="Your email address" 
-                        required
-                        autocomplete="email"
-                    >
-                    <button type="submit">Subscribe</button>
-                    <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 1rem;">
-                        We respect your privacy. Unsubscribe at any time.
-                    </p>
-                </form>
+            <!-- Book 3 -->
+            <div class="book-card">
+                <span class="book-status">Published</span>
+                <h3 class="book-title">The Phoenix Covenant</h3>
+                <p class="book-meta">Novella | Literary Fiction</p>
+                <p class="book-description">
+                    A metaphysical journey through collapse and reconstruction. When a man loses everything—his mother, his career, his identity—he is forced to confront what remains when all external scaffolding falls away. A story about Saturn Returns, spiritual audits, and the fire that reveals what cannot be destroyed.
+                </p>
+                <div class="book-links">
+                    <a href="https://www.amazon.com/dp/B0G52BLBZG" class="btn">Read on Amazon</a>
+                </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <!-- Footer -->
-    <footer class="container">
-        <p>&copy; <span id="year"></span> Hussein Salim. All rights reserved.</p>
-    </footer>
+    <!-- About Section -->
+    <section id="about">
+        <h2>About</h2>
+        <div class="about-content">
+            <div class="about-photo-container">
+                <img src="author.jpg" alt="Hussein Salim" class="about-photo">
+            </div>
+            <div class="about-bio">
+                <p>
+                    Hussein Salim writes introspective literary fiction that examines loss, emotional transformation, and the quiet thresholds where lives irrevocably shift.
+                </p>
+                <p>
+                    His work is characterized by restraint and psychological precision—a refusal to explain or sentimentalize, but rather to stand in the presence of what is difficult and real.
+                </p>
+                <p>
+                    Based in Kenya, he writes for readers navigating grief, uncertainty, and the search for grounded belonging in a world that often demands we move faster than we can actually endure.
+                </p>
+            </div>
+            <div class="about-contact">
+                <h3 style="margin-top: 0;">Contact</h3>
+                <div class="contact-item">
+                    <span class="contact-label">Email</span>
+                    <a href="mailto:salimauthor@gmail.com" class="contact-value">salimauthor@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-label">LinkedIn</span>
+                    <a href="https://www.linkedin.com/in/hussein-salim/" class="contact-value" target="_blank">linkedin.com/in/hussein-salim</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-label">Amazon Author</span>
+                    <a href="https://www.amazon.com/author/hussein-salim" class="contact-value" target="_blank">amazon.com/author/hussein-salim</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <script>
-        // Set current year
-        document.getElementById('year').textContent = new Date().getFullYear();
+    <!-- Newsletter Section -->
+    <section id="newsletter">
+        <h2>Stay Updated</h2>
+        <p class="newsletter-description">
+            Rare, meaningful updates about new work, essays, and releases. No spam. No hype.
+        </p>
+        <!-- Brevo Embedded Form -->
+        <div class="brevo-form">
+            <form method="POST" action="https://api.brevo.com/v3/contacts" id="brevo-form">
+                <input 
+                    type="email" 
+                    name="email" 
+                    placeholder="Your email address" 
+                    required
+                    autocomplete="email"
+                >
+                <button type="submit">Subscribe</button>
+                <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 1rem;">
+                    We respect your privacy. Unsubscribe at any time.
+                </p>
+            </form>
+        </div>
+    </section>
+</main>
 
-        // Simple Brevo form handling (basic implementation)
-        // For full Brevo integration, you'll embed their form directly (see Brevo setup guide)
-        document.getElementById('brevo-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const email = this.querySelector('input[type="email"]').value;
-            // This is a placeholder - you'll use Brevo's actual embed
-            alert('Thank you for subscribing! Check your email for confirmation.');
-            this.reset();
+<!-- Footer -->
+<footer class="container">
+    <p>&copy; <span id="year"></span> Hussein Salim. All rights reserved.</p>
+</footer>
+
+<script>
+    // Set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu toggle
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    navToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+    });
+
+    // Close menu when clicking on a link
+    document.querySelectorAll('#navMenu a').forEach(link => {
+        link.addEventListener('click', function() {
+            navMenu.classList.remove('active');
         });
-    </script>
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
+            navMenu.classList.remove('active');
+        }
+    });
+
+    // Simple Brevo form handling (basic implementation)
+    document.getElementById('brevo-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const email = this.querySelector('input[type="email"]').value;
+        alert('Thank you for subscribing! Check your email for confirmation.');
+        this.reset();
+    });
+</script>
+```
+
 </body>
 </html>
