@@ -509,18 +509,81 @@
         }
 
         .header-content {
-            flex-direction: column;
-            gap: 1.5rem;
+            padding: 0 1.5rem;
+            height: 50px;
+        }
+
+        .logo {
+            font-size: 1.1rem;
+            letter-spacing: 1px;
         }
 
         nav {
-            display: flex;
+            display: none;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            right: 0;
+            background: rgba(15, 15, 15, 0.99);
             flex-direction: column;
+            padding: 2rem;
+            border-bottom: 1px solid var(--border);
             gap: 1rem;
+        }
+
+        nav.active {
+            display: flex;
         }
 
         nav a {
             margin-left: 0;
+            font-size: 1rem;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        nav a::after {
+            display: none;
+        }
+
+        .nav-toggle {
+            display: block;
+        }
+
+        #home {
+            padding-top: 5rem;
+            padding-bottom: 3rem;
+        }
+
+        #home h1 {
+            font-size: 2rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .hero-subtitle {
+            font-size: 0.8rem;
+            padding: 0.4rem 0.8rem;
+        }
+
+        .bio-intro {
+            font-size: 1rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .hero-cta {
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .hero-cta .btn {
+            flex: 1;
+            min-width: 140px;
+            padding: 0.75rem 1.5rem;
+            font-size: 0.85rem;
+        }
+
+        .scroll-indicator {
+            bottom: 2rem;
         }
 
         .about-content {
@@ -540,9 +603,43 @@
         section {
             padding: 3rem 0;
         }
+    }
 
-        #home {
-            padding-top: 4rem;
+    @media (max-width: 480px) {
+        .container {
+            padding: 0 1rem;
+        }
+
+        .header-content {
+            padding: 0 1rem;
+        }
+
+        #home h1 {
+            font-size: 1.5rem;
+        }
+
+        .bio-intro {
+            font-size: 0.95rem;
+        }
+
+        .hero-cta {
+            flex-direction: column;
+        }
+
+        .hero-cta .btn {
+            width: 100%;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+        }
+
+        section {
+            padding: 2rem 0;
+        }
+
+        .about-photo {
+            max-width: 250px;
         }
     }
 
@@ -575,29 +672,30 @@
     </header>
 
 ```
-<!-- Main Content -->
 <main class="container">
     <!-- Home Section -->
     <section id="home">
-        <div class="hero-subtitle">Literary Fiction</div>
-        <h1>Exploring silence, grief, and the structures of inner transformation.</h1>
-        <p class="bio-intro">
-            Hussein Salim is a writer whose work explores silence, grief, identity, and the unseen structures that shape inner life. His writing is marked by restraint, psychological precision, and a deep respect for stillness—not as absence, but as a place where meaning consolidates.
-        </p>
-        <p class="bio-intro text-muted">
-            Drawing from a life shaped by transition and reinvention, Hussein writes for readers navigating loss, uncertainty, and the search for grounded belonging in an accelerated world.
-        </p>
+        <div class="hero-content">
+            <div class="hero-subtitle">Literary Fiction</div>
+            <h1>Exploring silence, grief, and the structures of inner transformation.</h1>
+            <p class="bio-intro">
+                Hussein Salim is a writer whose work explores silence, grief, identity, and the unseen structures that shape inner life. His writing is marked by restraint, psychological precision, and a deep respect for stillness—not as absence, but as a place where meaning consolidates.
+            </p>
+            <p class="bio-intro text-muted">
+                Drawing from a life shaped by transition and reinvention, Hussein writes for readers navigating loss, uncertainty, and the search for grounded belonging in an accelerated world.
+            </p>
 
-        <div class="hero-cta">
-            <a href="#books" class="btn">Explore Books</a>
-            <a href="#newsletter" class="btn btn-secondary">Subscribe</a>
-        </div>
+            <div class="hero-cta">
+                <a href="#books" class="btn">Explore Books</a>
+                <a href="#newsletter" class="btn btn-secondary">Subscribe</a>
+            </div>
 
-        <div class="scroll-indicator">
-            <div class="scroll-line"></div>
-            <p class="scroll-text">Scroll</p>
+            <div class="scroll-indicator">
+                <div class="scroll-line"></div>
+                <p class="scroll-text">Scroll</p>
+            </div>
         </div>
-    </div>
+    </section>
 
     <!-- Books Section -->
     <section id="books">
@@ -651,30 +749,33 @@
             <div class="about-photo-container">
                 <img src="author.jpg" alt="Hussein Salim" class="about-photo">
             </div>
-            <div class="about-bio">
-                <p>
-                    Hussein Salim writes introspective literary fiction that examines loss, emotional transformation, and the quiet thresholds where lives irrevocably shift.
-                </p>
-                <p>
-                    His work is characterized by restraint and psychological precision—a refusal to explain or sentimentalize, but rather to stand in the presence of what is difficult and real.
-                </p>
-                <p>
-                    Based in Kenya, he writes for readers navigating grief, uncertainty, and the search for grounded belonging in a world that often demands we move faster than we can actually endure.
-                </p>
-            </div>
-            <div class="about-contact">
-                <h3 style="margin-top: 0;">Contact</h3>
-                <div class="contact-item">
-                    <span class="contact-label">Email</span>
-                    <a href="mailto:salimauthor@gmail.com" class="contact-value">salimauthor@gmail.com</a>
+            <div>
+                <div class="about-bio">
+                    <p>
+                        Hussein Salim writes introspective literary fiction that examines loss, emotional transformation, and the quiet thresholds where lives irrevocably shift.
+                    </p>
+                    <p>
+                        His work is characterized by restraint and psychological precision—a refusal to explain or sentimentalize, but rather to stand in the presence of what is difficult and real.
+                    </p>
+                    <p>
+                        Based in Kenya, he writes for readers navigating grief, uncertainty, and the search for grounded belonging in a world that often demands we move faster than we can actually endure.
+                    </p>
                 </div>
-                <div class="contact-item">
-                    <span class="contact-label">LinkedIn</span>
-                    <a href="https://www.linkedin.com/in/hussein-salim/" class="contact-value" target="_blank">linkedin.com/in/hussein-salim</a>
-                </div>
-                <div class="contact-item">
-                    <span class="contact-label">Amazon Author</span>
-                    <a href="https://www.amazon.com/author/hussein-salim" class="contact-value" target="_blank">amazon.com/author/hussein-salim</a>
+
+                <div class="about-contact">
+                    <h3 style="margin-top: 0;">Contact</h3>
+                    <div class="contact-item">
+                        <span class="contact-label">Email</span>
+                        <a href="mailto:salimauthor@gmail.com" class="contact-value">salimauthor@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">LinkedIn</span>
+                        <a href="https://www.linkedin.com/in/hussein-salim/" class="contact-value" target="_blank">linkedin.com/in/hussein-salim</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Amazon Author</span>
+                        <a href="https://www.amazon.com/author/hussein-salim" class="contact-value" target="_blank">amazon.com/author/hussein-salim</a>
+                    </div>
                 </div>
             </div>
         </div>
