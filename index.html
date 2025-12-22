@@ -274,7 +274,34 @@
             transform: translateX(-50%) translateY(10px);
         }
     }
+/* Book Cover Image */
+.book-cover {
+    width: 100%;
+    height: 420px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--border);
+}
 
+/* Individual Book Covers */
+.cover-stillness {
+    background-image: url("/images/the-stillness-between-us.PNG");
+}
+
+.cover-silence {
+    background-image: url("/images/the-silence-that-changed-everything.PNG");
+}
+
+.cover-phoenix-codex {
+    background-image: url("/images/the-phoenix-codex.PNG");
+}
+
+.cover-phoenix-covenant {
+    background-image: url("/images/the-phoenix-covenant.PNG");
+}
     /* Books Section */
     .books-grid {
         display: grid;
@@ -699,55 +726,74 @@
 
     <!-- Books Section -->
     <section id="books">
-        <h2>Books</h2>
+        <h2>My Books</h2>
         <div class="books-grid">
             <!-- Book 1 -->
             <div class="book-card">
-                <span class="book-status">In Submission</span>
-                <h3 class="book-title">The Silence That Changed Everything</h3>
-                <p class="book-meta">Manuscript | Literary Fiction</p>
-                <p class="book-description">
-                    A profound meditation on descent, grief, and the ground beneath us. Following a man's journey from altitude to earth—from the controlled silence of an airplane cabin to the silence of loss—this work explores what happens when external structures collapse and only stillness remains.
-                </p>
-                <div class="book-links">
-                    <a href="https://www.amazon.com/author/hussein-salim" class="btn btn-secondary">More Info</a>
-                </div>
-            </div>
+    <span class="book-status">In Submission</span>
+
+    <img 
+        src="images/the-silence-that-changed-everything.PNG" 
+        alt="The Silence That Changed Everything by Hussein Salim"
+        class="book-cover"
+    >
+
+    <h3 class="book-title">The Silence That Changed Everything</h3>
+    <p class="book-meta">Manuscript | Literary Fiction</p>
+    <p class="book-description">
+        A profound meditation on descent, grief, and the ground beneath us...
+    </p>
+    <div class="book-links">
+        <a href="https://www.amazon.com/author/hussein-salim" class="btn btn-secondary">More Info</a>
+    </div>
+</div>
 
             <!-- Book 2 -->
             <div class="book-card">
-                <span class="book-status">Published</span>
-                <h3 class="book-title">The Stillness Between Us</h3>
-                <p class="book-meta">Novella | Literary Fiction</p>
-                <p class="book-description">
-                    A quiet exploration of intimacy, misunderstanding, and the cost of using stillness as both refuge and wall. When a flight attendant meets a woman whose peace mirrors his own, both discover that what looks like harmony from the outside may be incompatible at the core.
-                </p>
-                <div class="book-links">
-                    <a href="https://www.amazon.com/dp/B0DHJY0QLB" class="btn">Read on Amazon</a>
-                </div>
-            </div>
+    <span class="book-status">Published</span>
+
+    <img 
+        src="images/the-stillness-between-us.PNG" 
+        alt="The Stillness Between Us by Hussein Salim"
+        class="book-cover"
+    >
+
+    <h3 class="book-title">The Stillness Between Us</h3>
+    <p class="book-meta">Novella | Literary Fiction</p>
+    <p class="book-description">
+        A quiet exploration of intimacy, misunderstanding...
+    </p>
+    <div class="book-links">
+        <a href="https://www.amazon.com/dp/B0DHJY0QLB" class="btn">Read on Amazon</a>
+    </div>
+</div>
 
             <!-- Book 3 -->
             <div class="book-card">
-                <span class="book-status">Published</span>
-                <h3 class="book-title">The Phoenix Covenant</h3>
-                <p class="book-meta">Novella | Literary Fiction</p>
-                <p class="book-description">
-                    A metaphysical journey through collapse and reconstruction. When a man loses everything—his mother, his career, his identity—he is forced to confront what remains when all external scaffolding falls away. A story about Saturn Returns, spiritual audits, and the fire that reveals what cannot be destroyed.
-                </p>
-                <div class="book-links">
-                    <a href="https://www.amazon.com/dp/B0G52BLBZG" class="btn">Read on Amazon</a>
-                </div>
-            </div>
-        </div>
-    </section>
+    <span class="book-status">Published</span>
+
+    <img 
+        src="images/the-phoenix-covenant.PNG" 
+        alt="The Phoenix Covenant by Hussein Salim"
+        class="book-cover"
+    >
+
+    <h3 class="book-title">The Phoenix Covenant</h3>
+    <p class="book-meta">Novella | Literary Fiction</p>
+    <p class="book-description">
+        A metaphysical journey through collapse and reconstruction...
+    </p>
+    <div class="book-links">
+        <a href="https://www.amazon.com/dp/B0G52BLBZG" class="btn">Read on Amazon</a>
+    </div>
+</div>
 
     <!-- About Section -->
     <section id="about">
         <h2>About</h2>
         <div class="about-content">
             <div class="about-photo-container">
-                <img src="author.jpg" alt="Hussein Salim" class="about-photo">
+                <img src="images/author.jpg" alt="Hussein Salim" class="about-photo">
             </div>
             <div>
                 <div class="about-bio">
