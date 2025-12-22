@@ -1,431 +1,199 @@
-# 🎭 Hussein Salim – Official Author Website
+# Hussein Salim – Author
 
-Official Author Website for **Hussein Salim** - Visionary Author & Speaker, featuring *The Phoenix Covenant*.
+Official author website for Hussein Salim, featuring his published and forthcoming literary work.
 
----
+## About
 
-## 🌟 Live Website
+Hussein Salim is a writer whose work explores silence, grief, identity, and the unseen structures that shape inner life. His writing is marked by restraint, psychological precision, and a deep respect for stillness—not as absence, but as a place where meaning consolidates.
 
-➡️ **[View Live Author Website](https://husseinauthor.netlify.app//)**
+Drawing from a life shaped by transition and reinvention, Hussein writes for readers navigating loss, uncertainty, and the search for grounded belonging in an accelerated world.
 
----
+Based in Kenya.
 
-## 📚 About The Project
+## Books
 
-This website represents the digital home of Hussein Salim, showcasing his literary work, speaking engagements, and unique philosophy that bridges hospitality excellence with technological innovation. Built with a sophisticated dark theme and metallic gold accents, the site reflects the elemental themes present in *The Phoenix Covenant*.
+### The Silence That Changed Everything
 
-### Featured Work: **The Phoenix Covenant**
-*A metaphysical epic about the death of the ego and the birth of the soul.*
-> "There are two ways a man can fall. He can stumble over a stone, or he can fall from the sky."
+**Status:** In Submission  
+**Genre:** Literary Fiction
 
----
+A profound meditation on descent, grief, and the ground beneath us. Following a man’s journey from altitude to earth—from the controlled silence of an airplane cabin to the silence of loss—this work explores what happens when external structures collapse and only stillness remains.
 
-## ✨ Features
+### The Stillness Between Us
 
-- 🎨 **Premium Design** - Dark theme with metallic gold accents and elegant typography
-- 📱 **Fully Responsive** - Flawless experience across all devices
-- ✨ **Smooth Animations** - Scroll-triggered animations and interactive elements
-- 🔥 **Elemental Theme** - Fire & Water design motifs throughout
-- 📚 **Book Showcase** - 3D book cover with interactive hover effects
-- 🎯 **Professional Sections** - Author bio, books, blog, speaking, contact
-- 📝 **Blog-Ready** - Masonry grid layout for articles and insights
-- ⚡ **Performance Optimized** - Fast loading and SEO-friendly
+**Status:** Published  
+**Genre:** Literary Fiction (Novella)  
+**Available:** [Amazon](https://www.amazon.com/dp/B0DHJY0QLB)
 
----
+A quiet exploration of intimacy, misunderstanding, and the cost of using stillness as both refuge and wall. When two people meet whose peace mirrors their own composure, both discover that what looks like harmony from the outside may be incompatible at the core.
 
-## 🗂️ Project Structure
+### The Phoenix Covenant
+
+**Status:** Published  
+**Genre:** Literary Fiction (Novella)  
+**Available:** [Amazon](https://www.amazon.com/dp/B0G52BLBZG)
+
+A metaphysical journey through collapse and reconstruction. When a man loses everything—his mother, his career, his identity—he is forced to confront what remains when all external scaffolding falls away. A story about spiritual audits, transformation, and the fire that reveals what cannot be destroyed.
+
+## Website Features
+
+- **Minimalist Design** — Clean, restrained aesthetic matching the author’s voice
+- **Fully Responsive** — Works seamlessly on desktop, tablet, and mobile
+- **Newsletter Integration** — Built-in Brevo email signup form
+- **Professional Contact** — Direct email and social links
+- **Fast Loading** — No bloat, no unnecessary scripts
+- **SEO Friendly** — Semantic HTML, meta tags, Open Graph
+
+## Project Structure
 
 ```
 hussein-salim-author/
-├── index.html                 # Main website entry point
-├── css/
-│   └── style.css             # Complete styling system (CSS Grid, Flexbox, Variables)
-├── js/
-│   └── main.js               # Interactive features & animations
-├── images/                   # Author photos, book covers, assets
-│   ├── author/
-│   ├── book-covers/
-│   └── blog/
-├── samples/                  # Book excerpts & samples
-│   └── the-phoenix-covenant-sample.pdf
-├── downloads/                # Media assets
-│   └── speaker-kit.pdf
-└── README.md
+├── index.html          # Complete website (single page)
+├── author.jpg          # Author photograph
+├── README.md           # This file
+└── .gitignore          # Git configuration
 ```
 
----
+## Technology
 
-## 🚀 Quick Start
+- **HTML5** — Semantic markup
+- **CSS3** — Modern layout (CSS Grid, Flexbox, Custom Properties)
+- **JavaScript** — Minimal interactivity (form handling, year display)
+- **No Dependencies** — Pure HTML, CSS, and vanilla JavaScript
+- **No Build Process** — Deploy as-is
 
-### Local Development
+## Color Palette
 
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/hussein-salim-author.git
+|Color           |HEX    |Usage              |
+|----------------|-------|-------------------|
+|Accent Gold     |#c9b388|Primary brand color|
+|Text Primary    |#ffffff|Main text          |
+|Text Secondary  |#b0b0b0|Secondary text     |
+|Background Dark |#0f0f0f|Page background    |
+|Background Light|#1a1a1a|Card backgrounds   |
+|Border          |#333333|Subtle borders     |
 
-# Navigate to project directory
-cd hussein-salim-author
+## Typography
 
-# Open in browser (or use local server)
-open index.html
-```
+- **Headings & Display** — System fonts (Apple, Google, Microsoft defaults)
+- **Body Text** — System fonts (sans-serif stack)
+- **Size Scale** — 16px base, fluid scaling for headers
+- **Line Height** — 1.6 for readability
 
-### For Better Development Experience
+## Deployment
 
-```bash
-# Using Python (if installed)
-python -m http.server 8000
+### GitHub Pages (Recommended)
 
-# Using Node.js http-server
-npx http-server
+1. Create GitHub account at [github.com](https://github.com)
+1. Create new repository: `yourusername.github.io`
+1. Upload `index.html` and `author.jpg`
+1. Enable Pages in repository Settings
+1. Site goes live at `https://yourusername.github.io`
 
-# Using PHP
-php -S localhost:8000
-```
+**No cost. No dependencies. Automatic deployments.**
 
-### GitHub Pages Deployment
+### Custom Domain (Later)
 
-1. Ensure all files are committed and pushed to main branch
-2. Go to repository **Settings** → **Pages**
-3. Select **Deploy from a branch** → **main branch**
-4. Your site will be live at: `https://yourusername.github.io/hussein-salim-author/`
+When you purchase a domain:
 
----
+1. Point domain DNS to GitHub Pages
+1. Add CNAME record in repository Settings
+1. No disruption to existing site
 
-## 🎨 Design System
+### Alternative Hosting
 
-### Color Palette
+- **Netlify** — Drag-and-drop deployment (free tier available)
+- **Vercel** — Git-based deployment
+- **Traditional Web Host** — FTP upload
 
-| Color | HEX | Usage |
-|-------|-----|-------|
-| Primary Gold | `#c9b388` | Main brand color |
-| Mid Bronze | `#a89168` | Secondary accents |
-| Deep Bronze | `#8a7456` | Darker accents |
-| Dark Base | `#0a0a0a` | Background |
-| Text Light | `#ffffff` | Primary text |
-| Fire Orange | `#ff6b35` | Fire element |
-| Water Blue | `#4fc3f7` | Water element |
+## Newsletter Setup
 
-### Typography
+The website includes a Brevo newsletter signup form.
 
-- **Headings**: `Cormorant Garamond` (Serif)
-- **Body**: `Inter` (Sans-serif)
-- **Weights**: 300, 400, 500, 600, 700
+### Configure Brevo
 
-### Components
+1. Create account at [brevo.com](https://brevo.com)
+1. Create contact list: “Newsletter Subscribers”
+1. Create subscription form
+1. Copy embed code
+1. Replace placeholder form in `index.html` with Brevo code
+1. Redeploy site
 
-- **Glass Cards**: Background blur with border effects
-- **Gradient Text**: Gold gradient text effects
-- **Hover Lift**: Transform animations on hover
-- **Scroll Animations**: Reveal animations on scroll
-- **Particle System**: Animated background particles
+### Email List Building
 
----
+- Newsletter is optional but recommended
+- Rare, meaningful updates only (no spam)
+- Use for book announcements, agent updates, new releases
 
-## 📖 Website Sections
-
-### 🏠 Hero Section
-- Animated particle background
-- Compelling author introduction
-- Call-to-action buttons
-- Scroll indicator
-
-### 👤 Author Bio
-- Professional background
-- Elemental duality (Fire & Water)
-- Career highlights and expertise
-- Author photo placeholder
-
-### 📚 Books Section
-- 3D book cover showcase
-- *The Phoenix Covenant* features
-- Purchase and sample links
-- Book description and highlights
-
-### 📝 Blog Section
-- Masonry grid layout
-- Categorized articles
-- Transformative writing insights
-- Six blog post templates
-
-### 🎤 Speaking Section
-- Keynote topics list
-- Workshop information
-- Speaker kit download
-- Booking inquiries
-
-### 📞 Contact Section
-- Professional inquiry form
-- Social media links
-- Literary agent information
-- Contact form validation
-
----
-
-## 🛠️ Technical Stack
-
-### Frontend Technologies
-- **HTML5**: Semantic markup
-- **CSS3**: Grid, Flexbox, Custom Properties, Animations
-- **JavaScript ES6+**: Modern JavaScript features
-
-### Libraries & Tools
-- **Google Fonts**: Cormorant Garamond & Inter
-- **CSS Grid & Flexbox**: Modern layout systems
-- **CSS Custom Properties**: Theme management
-- **SVG Icons**: Scalable vector graphics
-
-### Development Features
-- **Responsive Design**: Mobile-first approach
-- **Cross-browser Compatibility**: Modern browser support
-- **Performance Optimized**: Minimal dependencies
-- **SEO Friendly**: Semantic HTML structure
-
----
-
-## 📄 Script Features
-
-### Main JavaScript Functionality
-
-```javascript
-// Navigation
-- Mobile navigation toggle
-- Smooth scrolling navigation
-- Navbar background on scroll
-
-// Animations
-- Scroll-triggered animations
-- 3D book cover interactions
-- Particle system animations
-
-// Interactions
-- Contact form handling
-- Button click handlers
-- Social media links
-- Notification system
-```
-
-### CSS Features
-
-- **Responsive Design**: Media queries for all devices
-- **Glass Morphism**: Backdrop filter effects
-- **Gradient Effects**: Text and background gradients
-- **Transform Animations**: Hover and focus states
-- **Custom Scroll Behavior**: Smooth scrolling
-
----
-
-## 🌐 Social Media Integration
-
-### Connected Platforms
-- 📘 Facebook Author Page
-- 🐦 Twitter/X Profile
-- 📸 Instagram
-- 💼 LinkedIn Profile
-- 📚 Goodreads Author Profile
-
-### Social Features
-- Hover animations on social links
-- Direct platform integration
-- Professional branding consistency
-
----
-
-## 📧 Contact & Inquiries
-
-### Literary Inquiries
-- **Email**: [your-email@domain.com]
-- **Website**: [Live Website URL]
-- **Contact Form**: Integrated on website
-
-### Speaking Engagements
-- Keynote speeches
-- Corporate workshops
-- Literary events
-- Leadership seminars
-
-### Media & Press
-- Author interviews
-- Book reviews
-- Feature articles
-- Podcast appearances
-
----
-
-## 🔧 Development Guide
-
-### File Structure Explanation
-
-```
-index.html          # Main entry point with all sections
-css/style.css       # Complete styling with CSS variables
-js/main.js          # All interactive functionality
-images/             # All visual assets
-samples/            # Book samples and excerpts
-downloads/          # Additional resources
-```
-
-### Customization Guide
-
-1. **Colors**: Update CSS variables in `:root` selector
-2. **Content**: Modify HTML content in respective sections
-3. **Images**: Replace placeholder images in `images/` folder
-4. **Social Links**: Update URLs in JavaScript and HTML
-5. **Contact Form**: Configure form handling endpoint
-
-### Browser Support
+## Browser Support
 
 - ✅ Chrome 90+
 - ✅ Firefox 88+
 - ✅ Safari 14+
 - ✅ Edge 90+
+- ✅ Mobile browsers (iOS Safari, Chrome Mobile)
 
----
+## File Customization
 
-## 🚀 Deployment
+### Update Author Bio
 
-### GitHub Pages (Recommended)
-1. Push code to GitHub repository
-2. Enable GitHub Pages in settings
-3. Site deploys automatically on push
+Edit the text in the “About” section of `index.html`.
 
-### Alternative Hosting Options
-- **Netlify**: Drag and drop deployment
-- **Vercel**: Git-based deployment
-- **Traditional Web Hosting**: FTP upload
+### Update Book Descriptions
 
-### Custom Domain
-1. Purchase domain from registrar
-2. Configure DNS settings
-3. Update CNAME record for GitHub Pages
+Edit book card content in the “Books” section.
 
----
+### Update Contact Info
 
-## 📜 License
+Edit email and social links in the “About” section.
 
-© 2024 Hussein Salim. All rights reserved.
+### Change Color Scheme
 
-### Intellectual Property
-- **The Phoenix Covenant** - Copyright protected
-- **Website Design** - Original work
-- **Literary Content** - Protected by copyright law
+Edit CSS variables in `style.css`:
 
-### Usage Rights
-- Personal and educational use permitted
-- Commercial use requires written permission
-- Code may be used as reference with attribution
+```css
+:root {
+    --accent: #c9b388;
+    --bg-dark: #0f0f0f;
+    --text-primary: #ffffff;
+    /* etc */
+}
+```
 
----
+### Update Author Photo
 
-## 🗺️ Future Enhancements
+Replace `author.jpg` with your image file (same name).
 
-### Planned Features
-- [ ] Blog content management system
-- [ ] E-commerce integration for book sales
-- [ ] Newsletter subscription system
-- [ ] Event calendar for speaking engagements
-- [ ] *The Phoenix Covenant* book trailer integration
-- [ ] Multi-language support
-- [ ] Dark/Light theme toggle
-- [ ] Audio book samples
-- [ ] Reader reviews section
-- [ ] Advanced analytics integration
+## Performance
 
-### Technical Improvements
-- [ ] Progressive Web App (PWA) features
-- [ ] Lazy loading for images
-- [ ] Service worker for offline functionality
-- [ ] Enhanced accessibility features
-- [ ] Performance optimizations
+- **Zero External Dependencies** — No CDNs, no third-party scripts (except optional Brevo form)
+- **Fast Load Times** — Minimal CSS, no animations, efficient DOM
+- **Mobile Optimized** — Responsive design, touch-friendly
+- **Accessibility** — Semantic HTML, proper contrast ratios, readable fonts
 
----
+## SEO
 
-## 🤝 Contributing
+- **Meta Tags** — Description, keywords, Open Graph
+- **Semantic HTML** — Proper heading hierarchy, structured content
+- **Mobile First** — Responsive design signals
+- **Fast Loading** — Core Web Vitals friendly
 
-While this is a personal author website, feedback and suggestions are welcome:
+## Contact
 
-### How to Contribute
-1. Fork the repository
-2. Create a feature branch
-3. Make your improvements
-4. Submit a pull request
+**Email:** salimauthor@gmail.com  
+**LinkedIn:** [linkedin.com/in/hussein-salim](https://www.linkedin.com/in/hussein-salim/)  
+**Amazon Author Page:** [amazon.com/author/hussein-salim](https://www.amazon.com/author/hussein-salim)
 
-### Issue Reporting
-- Bug reports
-- Feature requests
-- Documentation improvements
-- Security vulnerabilities
+## License
 
-### Code of Conduct
-- Professional and respectful communication
-- Constructive feedback only
-- Appreciation for all contributions
+© 2025 Hussein Salim. All rights reserved.
 
----
+The content, design, and literary works on this website are protected by copyright. Reproduction, distribution, or transmission without written permission is prohibited.
 
-## 📞 Support
+## Acknowledgments
 
-### Technical Support
-- GitHub Issues for code-related questions
-- Email for general inquiries
+Built with restraint and intention. No frameworks, no bloat—just clean HTML, CSS, and purpose.
 
-### Literary Support
-- Contact for book-related questions
-- Speaking engagement inquiries
-- Media interview requests
+-----
 
----
-
-## 🙏 Acknowledgments
-
-### Inspiration
-- The metaphysical themes in *The Phoenix Covenant*
-- Ancient wisdom and modern technology fusion
-- Personal transformation journeys
-
-### Technical Thanks
-- Google Fonts for typography
-- CSS Grid and Flexbox specifications
-- Modern browser developers
-
----
-
-## 📈 Analytics & SEO
-
-### Search Engine Optimization
-- Semantic HTML structure
-- Meta tags and descriptions
-- Open Graph protocol implementation
-- Structured data markup
-
-### Performance Metrics
-- Fast loading times
-- Mobile-friendly design
-- Accessibility compliance
-- Cross-browser compatibility
-
----
-
-*"Where stories transform and visions take flight"*  
-**– Hussein Salim**
-
----
-
-<div align="center">
-
-**© 2024 Hussein Salim | The Phoenix Covenant | All Rights Reserved**
-
-[Live Website] • [Book Details] • [Speaking Engagements] • [Contact]
-
-</div>
-
-This README.md file is ready to be saved in your VS Code project. It includes:
-
-✅ Complete project documentation  
-✅ Professional formatting for GitHub  
-✅ Technical specifications  
-✅ Deployment instructions  
-✅ License information  
-✅ Future roadmap  
-✅ Contributing guidelines  
-
+**“I write to explore what happens when the sky stops being an escape and becomes a mirror.”**
