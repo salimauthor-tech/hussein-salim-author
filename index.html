@@ -3,336 +3,116 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Hussein Salim - Literary author exploring silence, grief, identity, and inner transformation.">
-<title>Hussein Salim — Author</title>
+<meta name="description" content="Hussein Salim — A living letter written in silence, grief, and becoming.">
+<title>Hussein Salim — The Living Letter</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="icon" href="images/favicon.png">
 
-<link rel="icon" href="/images/favicon.ico">
-<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@200;300;400&display=swap" rel="stylesheet">
 
 <style>
-/* =========================
-   VARIABLES & RESET
-========================= */
 :root {
-    --bg-dark: #0f0f0f;
-    --bg-light: #1a1a1a;
-    --text-primary: #ffffff;
-    --text-secondary: #b0b0b0;
-    --accent: #c9b388;
-    --border: #333333;
-    --transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  --void:#05070A;
+  --midnight:#0B1B33;
+  --ink:#E5E7EB;
+  --ash:#9fb2c9;
+  --trace:#3A86B7;
+  --memory:#bfa76a;
+  --border:rgba(255,255,255,.08);
+  --ease:cubic-bezier(.23,1,.32,1);
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-
-body {
-    font-family: 'Inter', sans-serif;
-    background: var(--bg-dark);
-    color: var(--text-primary);
-    line-height: 1.6;
-    overflow-x: hidden;
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:Inter,sans-serif;
+  background:var(--void);
+  color:var(--ink);
+  line-height:1.8;
+  background-image:
+    radial-gradient(circle at 80% -20%, rgba(58,134,183,.12), transparent 50%);
 }
 
-/* =========================
-   SCROLL REVEAL
-========================= */
-.reveal {
-    opacity: 0;
-    transform: translateY(36px);
-    transition: var(--transition);
-}
-.reveal.active {
-    opacity: 1;
-    transform: translateY(0);
+h1,h2,h3,.serif{font-family:'Cormorant Garamond',serif;font-weight:300}
+
+h1{
+  font-size:clamp(2.8rem,6vw,4.6rem);
+  line-height:1.08;
+  background:linear-gradient(to right,#fff,#9fb2c9);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
 
-/* =========================
-   HEADER & NAV
-========================= */
-header {
-    position: fixed;
-    top: 0; width: 100%;
-    z-index: 1000;
-    background: rgba(15,15,15,0.9);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border);
+h2{
+  font-size:2rem;
+  font-style:italic;
+  color:var(--ash);
+  margin-bottom:2rem;
 }
 
-.header-content {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    height: 72px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+p{max-width:65ch;color:var(--ash);margin-bottom:1.5rem}
+
+.container{max-width:1000px;margin:auto;padding:0 2rem}
+section{padding:8rem 0;border-bottom:1px solid var(--border)}
+
+a{color:inherit;text-decoration:none}
+
+.btn{
+  border:1px solid var(--border);
+  padding:1rem 2.4rem;
+  font-size:.7rem;
+  letter-spacing:.15rem;
+  text-transform:uppercase;
+  transition:.5s var(--ease);
+}
+.btn:hover{background:var(--ink);color:var(--void)}
+
+header{
+  position:absolute;
+  top:0;width:100%;
+  padding:2rem 0;
+}
+.nav-flex{display:flex;justify-content:space-between;align-items:center}
+nav a{
+  margin-left:2rem;
+  font-size:.75rem;
+  letter-spacing:.15rem;
+  text-transform:uppercase;
+  color:var(--ash);
+}
+nav a:hover{color:var(--trace)}
+
+.hero{
+  min-height:90vh;
+  display:flex;
+  align-items:center;
+}
+.hero-sub{color:var(--trace);letter-spacing:.2rem;text-transform:uppercase;font-size:.75rem}
+
+.book-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:4rem;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    text-decoration: none;
-    color: var(--accent);
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    font-size: 1.25rem;
-    letter-spacing: 1px;
+.book{
+  border-left:1px solid var(--border);
+  padding-left:1.5rem;
 }
 
-.logo img {
-    height: 30px;
-    width: auto;
+.about{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:4rem;
+  align-items:center;
 }
 
-nav {
-    display: flex;
-    align-items: center;
-}
+.about img{width:100%;opacity:.9}
 
-nav a {
-    color: var(--text-secondary);
-    text-decoration: none;
-    font-size: 0.75rem;
-    margin-left: 2rem;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    transition: var(--transition);
-}
-nav a:hover { color: var(--accent); }
-
-.nav-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: var(--accent);
-    font-size: 1.8rem;
-    cursor: pointer;
-}
-
-/* =========================
-   LAYOUT
-========================= */
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
-section {
-    padding: 9rem 0;
-    border-bottom: 1px solid var(--border);
-}
-
-h1, h2, h3 {
-    font-family: 'Playfair Display', serif;
-    font-weight: 400;
-}
-
-h2 {
-    font-size: 2.4rem;
-    margin-bottom: 3rem;
-    color: var(--accent);
-}
-
-p { color: var(--text-secondary); }
-
-/* =========================
-   HERO
-========================= */
-#home {
-    padding-top: 15rem;
-    text-align: center;
-    border-bottom: none;
-}
-
-.hero-subtitle {
-    display: block;
-    color: var(--accent);
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    font-size: 0.75rem;
-    margin-bottom: 1.2rem;
-}
-
-#home h1 {
-    font-size: clamp(2.8rem, 8vw, 4.6rem);
-    line-height: 1.1;
-    margin-bottom: 1.5rem;
-}
-
-/* =========================
-   BOOKS
-========================= */
-.books-grid {
-    display: grid;
-    gap: 4rem;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-}
-
-.book-card {
-    background: var(--bg-light);
-    border: 1px solid var(--border);
-    padding: 2.5rem;
-    border-radius: 4px;
-    transition: var(--transition);
-}
-.book-card:hover {
-    transform: translateY(-8px);
-    border-color: var(--accent);
-}
-
-.book-status {
-    color: var(--accent);
-    font-size: 0.7rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-}
-
-.book-cover {
-    width: 100%;
-    height: auto;
-    max-height: 420px;
-    object-fit: contain;
-    border-radius: 2px;
-    border: 1px solid var(--border);
-    margin-bottom: 1.5rem;
-}
-
-.book-meta {
-    font-size: 0.8rem;
-    color: var(--text-secondary);
-    margin-bottom: 1rem;
-}
-
-/* =========================
-   BOOK LINK RESET + AMAZON INDICATOR
-========================= */
-.book-link {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-}
-
-.book-link * {
-    color: inherit;
-    text-decoration: none;
-}
-
-.book-link:visited,
-.book-link:active,
-.book-link:hover {
-    color: inherit;
-    text-decoration: none;
-}
-
-.book-card::after {
-    content: "Read on Amazon →";
-    display: inline-block;
-    margin-top: 1.25rem;
-    font-size: 0.75rem;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: var(--accent);
-    opacity: 0.85;
-    transition: var(--transition);
-}
-
-.book-link:hover .book-card::after {
-    opacity: 1;
-    transform: translateX(4px);
-}
-
-/* =========================
-   ABOUT
-========================= */
-.about-grid {
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 4rem;
-    align-items: center;
-}
-
-.about-photo {
-    width: 100%;
-    border-radius: 4px;
-    border: 1px solid var(--border);
-    filter: grayscale(100%);
-    transition: var(--transition);
-}
-.about-photo:hover { filter: grayscale(0%); }
-
-/* =========================
-   CONTACT
-========================= */
-.contact-form {
-    max-width: 600px;
-    display: grid;
-    gap: 1.5rem;
-}
-
-input, textarea {
-    background: var(--bg-light);
-    border: 1px solid var(--border);
-    padding: 1rem;
-    color: white;
-    border-radius: 4px;
-    font-family: inherit;
-}
-
-input:focus, textarea:focus {
-    outline: none;
-    border-color: var(--accent);
-}
-
-.btn {
-    background: var(--accent);
-    color: var(--bg-dark);
-    border: none;
-    padding: 1rem 2rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: var(--transition);
-}
-.btn:hover { background: #fff; }
-
-/* =========================
-   MOBILE
-========================= */
-@media (max-width: 768px) {
-    .logo { letter-spacing: 0.5px; }
-
-    .nav-toggle { display: block; }
-
-    nav {
-        position: absolute;
-        top: 72px; left: 0; width: 100%;
-        background: var(--bg-dark);
-        flex-direction: column;
-        padding: 2rem;
-        text-align: center;
-        opacity: 0;
-        transform: translateY(-10px);
-        pointer-events: none;
-        transition: var(--transition);
-    }
-
-    nav.active {
-        opacity: 1;
-        transform: translateY(0);
-        pointer-events: auto;
-    }
-
-    nav a { margin: 1rem 0; }
-
-    .about-grid { grid-template-columns: 1fr; }
+footer{
+  padding:4rem 0;
+  text-align:center;
+  font-size:.75rem;
+  color:var(--ash);
 }
 </style>
 </head>
@@ -340,122 +120,77 @@ input:focus, textarea:focus {
 <body>
 
 <header>
-<div class="header-content">
-    <a href="#home" class="logo">
-        <img src="/images/logo.png" alt="Hussein Salim logo">
-        Hussein Salim
-    </a>
-
-    <button class="nav-toggle" id="navToggle">☰</button>
-
-    <nav id="navMenu">
-        <a href="#home">Home</a>
-        <a href="#works">Works</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+  <div class="container nav-flex">
+    <img src="images/logo.png" alt="Hussein Salim" height="38">
+    <nav>
+      <a href="#works">Works</a>
+      <a href="#about">About</a>
+      <a href="foundation.html">Foundation</a>
     </nav>
-</div>
+  </div>
 </header>
 
-<main>
-
-<section id="home" class="container reveal">
-    <span class="hero-subtitle">Literary Fiction</span>
-    <h1>The architecture of <br><em>silence & meaning</em>.</h1>
-    <p style="max-width:650px;margin:0 auto;font-size:1.1rem;">
-        Hussein Salim is a writer whose work explores silence, grief, identity,
-        and the unseen structures that shape inner life.
+<section class="hero">
+  <div class="container">
+    <span class="hero-sub">The Living Letter</span>
+    <h1>The architecture of<br><em>silence & meaning</em>.</h1>
+    <p>
+      I write for those navigating grief, migration, and the quiet
+      reconstruction of the self.  
+      This is not a platform. It is a place to pause.
     </p>
+  </div>
 </section>
 
-<section id="works" class="container reveal">
-<h2>Selected Works</h2>
+<section id="works">
+  <div class="container">
+    <h2>The Work</h2>
+    <div class="book-grid">
 
-<div class="books-grid">
+      <div class="book">
+        <span class="hero-sub">Published</span>
+        <h3 class="serif">The Stillness Between Us</h3>
+        <p>An intimate record of distance, presence, and restraint.</p>
+        <a href="https://amazon.com" class="btn">Read</a>
+      </div>
 
-<a class="book-link" href="https://www.amazon.com/author/hussein-salim" target="_blank">
-<div class="book-card">
-<span class="book-status">In Submission</span>
-<img src="/images/the-silence-that-changed-everything.PNG" class="book-cover" alt="">
-<h3>The Silence That Changed Everything</h3>
-<p class="book-meta">Manuscript · Literary Fiction</p>
-<p>A meditation on grief, descent, and the quiet restructuring of the self.</p>
-</div>
-</a>
+      <div class="book">
+        <span class="hero-sub">Under Agency Review</span>
+        <h3 class="serif">The Silence That Changed Everything</h3>
+        <p>A memoir of collapse, loss, and reorientation.</p>
+      </div>
 
-<a class="book-link" href="https://www.amazon.com/dp/B0DHJY0QLB" target="_blank">
-<div class="book-card">
-<span class="book-status">Published</span>
-<img src="/images/the-stillness-between-us.PNG" class="book-cover" alt="">
-<h3>The Stillness Between Us</h3>
-<p class="book-meta">Novella · Literary Fiction</p>
-<p>A restrained exploration of intimacy and the silence between people.</p>
-</div>
-</a>
+      <div class="book">
+        <span class="hero-sub">Published</span>
+        <h3 class="serif">The Phoenix Covenant</h3>
+        <p>A metaphysical reckoning with inheritance and becoming.</p>
+        <a href="https://amazon.com" class="btn">Read</a>
+      </div>
 
-<a class="book-link" href="https://www.amazon.com/dp/B0G52BLBZG" target="_blank">
-<div class="book-card">
-<span class="book-status">Published</span>
-<img src="/images/the-phoenix-covenant.PNG" class="book-cover" alt="">
-<h3>The Phoenix Covenant</h3>
-<p class="book-meta">Novella · Literary Fiction</p>
-<p>A metaphysical journey through collapse and moral reckoning.</p>
-</div>
-</a>
-
-</div>
+    </div>
+  </div>
 </section>
 
-<section id="about" class="container reveal">
-<div class="about-grid">
-<div>
-<h2>About</h2>
-<p>Hussein Salim writes introspective literary fiction marked by restraint and psychological precision.</p>
-<p>He writes for readers navigating loss, uncertainty, and grounded belonging.</p>
-</div>
-<div>
-<img src="/images/author.jpg" alt="Hussein Salim portrait" class="about-photo">
-</div>
-</div>
+<section id="about">
+  <div class="container about">
+    <div>
+      <h2 class="serif">About</h2>
+      <p>
+        Hussein Salim is a Kenyan-born writer whose work explores silence,
+        loss, embodiment, and the psychological aftermath of collapse.
+      </p>
+      <p>
+        His writing privileges presence over performance,
+        and truth over instruction.
+      </p>
+    </div>
+    <img src="images/author.jpg" alt="Hussein Salim">
+  </div>
 </section>
 
-<section id="contact" class="container reveal" style="border-bottom:none;">
-<h2>Contact</h2>
-<p style="margin-bottom:2rem;">For literary inquiries and correspondence.</p>
-<form class="contact-form">
-<input type="text" placeholder="Full Name" required>
-<input type="email" placeholder="Email Address" required>
-<textarea rows="6" placeholder="Your Message" required></textarea>
-<button class="btn">Send Message</button>
-</form>
-</section>
-
-</main>
-
-<footer style="padding:4rem 0;text-align:center;font-size:0.8rem;border-top:1px solid var(--border);">
-<p>&copy; 2025 Hussein Salim. All rights reserved.</p>
+<footer>
+  © 2025 Hussein Salim · A sealed record
 </footer>
-
-<script>
-const navToggle = document.getElementById('navToggle');
-const navMenu = document.getElementById('navMenu');
-
-navToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-});
-
-document.querySelectorAll('nav a').forEach(link =>
-    link.addEventListener('click', () => navMenu.classList.remove('active'))
-);
-
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('active');
-    });
-}, { threshold: 0.15 });
-
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-</script>
 
 </body>
 </html>
