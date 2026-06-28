@@ -1,196 +1,545 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Hussein Salim — A living letter written in silence, grief, and becoming.">
-<title>Hussein Salim — The Living Letter</title>
-
-<link rel="icon" href="images/favicon.png">
-
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@200;300;400&display=swap" rel="stylesheet">
-
-<style>
-:root {
-  --void:#05070A;
-  --midnight:#0B1B33;
-  --ink:#E5E7EB;
-  --ash:#9fb2c9;
-  --trace:#3A86B7;
-  --memory:#bfa76a;
-  --border:rgba(255,255,255,.08);
-  --ease:cubic-bezier(.23,1,.32,1);
-}
-
-*{margin:0;padding:0;box-sizing:border-box}
-body{
-  font-family:Inter,sans-serif;
-  background:var(--void);
-  color:var(--ink);
-  line-height:1.8;
-  background-image:
-    radial-gradient(circle at 80% -20%, rgba(58,134,183,.12), transparent 50%);
-}
-
-h1,h2,h3,.serif{font-family:'Cormorant Garamond',serif;font-weight:300}
-
-h1{
-  font-size:clamp(2.8rem,6vw,4.6rem);
-  line-height:1.08;
-  background:linear-gradient(to right,#fff,#9fb2c9);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
-
-h2{
-  font-size:2rem;
-  font-style:italic;
-  color:var(--ash);
-  margin-bottom:2rem;
-}
-
-p{max-width:65ch;color:var(--ash);margin-bottom:1.5rem}
-
-.container{max-width:1000px;margin:auto;padding:0 2rem}
-section{padding:8rem 0;border-bottom:1px solid var(--border)}
-
-a{color:inherit;text-decoration:none}
-
-.btn{
-  border:1px solid var(--border);
-  padding:1rem 2.4rem;
-  font-size:.7rem;
-  letter-spacing:.15rem;
-  text-transform:uppercase;
-  transition:.5s var(--ease);
-}
-.btn:hover{background:var(--ink);color:var(--void)}
-
-header{
-  position:absolute;
-  top:0;width:100%;
-  padding:2rem 0;
-}
-.nav-flex{display:flex;justify-content:space-between;align-items:center}
-nav a{
-  margin-left:2rem;
-  font-size:.75rem;
-  letter-spacing:.15rem;
-  text-transform:uppercase;
-  color:var(--ash);
-}
-nav a:hover{color:var(--trace)}
-
-.hero{
-  min-height:90vh;
-  display:flex;
-  align-items:center;
-}
-.hero-sub{color:var(--trace);letter-spacing:.2rem;text-transform:uppercase;font-size:.75rem}
-
-.book-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:4rem;
-}
-
-.book{
-  border-left:1px solid var(--border);
-  padding-left:1.5rem;
-}
-
-.about{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:4rem;
-  align-items:center;
-}
-
-.about img{width:100%;opacity:.9}
-
-footer{
-  padding:4rem 0;
-  text-align:center;
-  font-size:.75rem;
-  color:var(--ash);
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="SAMIA'S — Gold in the Fractures. A memoir about what remains when everything is stripped away. By the Cartographer of Fractures."/>
+  <meta property="og:title" content="SAMIA'S — Gold in the Fractures"/>
+  <meta property="og:description" content="Fractures do not end us. They reveal us."/>
+  <meta property="og:image" content="gold-in-the-fractures-cover.jpg"/>
+  <title>SAMIA'S — Gold in the Fractures</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 </head>
 
 <body>
 
-<header>
-  <div class="container nav-flex">
-    <img src="images/logo.png" alt="Hussein Salim" height="38">
-    <nav>
-      <a href="#works">Works</a>
-      <a href="#about">About</a>
-      <a href="foundation.html">Foundation</a>
-    </nav>
-  </div>
-</header>
+  <!-- ░░ NAV ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+  <nav id="nav">
+    <div class="nav-logo">SAMIA<span class="gold">'</span>S</div>
+    <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#book">The Book</a></li>
+      <li><a href="#quotes">Inside</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#cycle">The Cycle</a></li>
+      <li><a href="#newsletter">Stay Close</a></li>
+      <li><a href="https://amazon.com/dp/YOUR_ASIN"
+             target="_blank"
+             class="nav-cta">Read on Amazon</a></li>
+    </ul>
+  </nav>
 
-<section class="hero">
-  <div class="container">
-    <span class="hero-sub">The Living Letter</span>
-    <h1>The architecture of<br><em>silence & meaning</em>.</h1>
-    <p>
-      I write for those navigating grief, migration, and the quiet
-      reconstruction of the self.  
-      This is not a platform. It is a place to pause.
-    </p>
-  </div>
-</section>
+  <!-- ░░ HERO ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
 
-<section id="works">
-  <div class="container">
-    <h2>The Work</h2>
-    <div class="book-grid">
+    <div class="hero-inner container">
 
-      <div class="book">
-        <span class="hero-sub">Published</span>
-        <h3 class="serif">The Stillness Between Us</h3>
-        <p>An intimate record of distance, presence, and restraint.</p>
-        <a href="https://amazon.com" class="btn">Read</a>
+      <div class="hero-book">
+        <div class="book-3d-wrap">
+          <img
+            src="gold-in-the-fractures-cover.jpg"
+            alt="Gold in the Fractures — SAMIA'S"
+            class="book-cover-img"
+          />
+          <div class="book-shadow"></div>
+        </div>
       </div>
 
-      <div class="book">
-        <span class="hero-sub">Under Agency Review</span>
-        <h3 class="serif">The Silence That Changed Everything</h3>
-        <p>A memoir of collapse, loss, and reorientation.</p>
-      </div>
-
-      <div class="book">
-        <span class="hero-sub">Published</span>
-        <h3 class="serif">The Phoenix Covenant</h3>
-        <p>A metaphysical reckoning with inheritance and becoming.</p>
-        <a href="https://amazon.com" class="btn">Read</a>
+      <div class="hero-text">
+        <p class="eyebrow">SAMIA'S &nbsp;·&nbsp; What Remains?</p>
+        <h1 class="hero-title">
+          Gold in the<br/>
+          <span class="title-fractures">Fractures</span>
+        </h1>
+        <p class="hero-sub">
+          Fractures do not end us.<br/>
+          <em>They reveal us.</em>
+        </p>
+        <div class="hero-divider"></div>
+        <p class="hero-body">
+          Written from a spare room in Kitui, Kenya, beneath a ceiling
+          fan that clicked on every third rotation. This is not a memoir
+          about recovery. It is a memoir about perception — about learning
+          to see clearly when the floor gives way.
+        </p>
+        <div class="btn-group">
+          <a href="https://amazon.com/dp/YOUR_ASIN"
+             target="_blank"
+             class="btn-primary">Read on Amazon</a>
+          <a href="#newsletter"
+             class="btn-secondary">Get First Chapters Free</a>
+        </div>
       </div>
 
     </div>
-  </div>
-</section>
 
-<section id="about">
-  <div class="container about">
-    <div>
-      <h2 class="serif">About</h2>
-      <p>
-        Hussein Salim is a Kenyan-born writer whose work explores silence,
-        loss, embodiment, and the psychological aftermath of collapse.
-      </p>
-      <p>
-        His writing privileges presence over performance,
-        and truth over instruction.
-      </p>
+    <div class="hero-scroll-hint">
+      <span></span>
     </div>
-    <img src="images/author.jpg" alt="Hussein Salim">
-  </div>
-</section>
+  </section>
 
-<footer>
-  © 2025 Hussein Salim · A sealed record
-</footer>
+  <!-- ░░ PHILOSOPHY STRIP ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+  <section id="philosophy">
+    <div class="container philosophy-inner">
+      <div class="philosophy-rule"></div>
+      <blockquote class="philosophy-quote">
+        "We are not healed by forgetting what broke us.<br/>
+        We are healed by discovering what remained unbroken within us."
+      </blockquote>
+      <p class="philosophy-attr">— SAMIA'S</p>
+      <div class="philosophy-rule"></div>
+    </div>
+  </section>
+
+  <!-- ░░ BOOK SHOWCASE ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+  <section id="book">
+    <div class="container">
+
+      <p class="section-label">The Work</p>
+      <h2 class="section-title">Gold in the Fractures</h2>
+      <p class="section-sub">Volume I of a six-volume existential cycle</p>
+
+      <div class="book-showcase">
+
+        <div class="showcase-cover">
+          <img
+            src="gold-in-the-fractures-cover.jpg"
+            alt="Gold in the Fractures book cover"
+          />
+          <div class="showcase-cover-glow"></div>
+        </div>
+
+        <div class="showcase-text">
+          <p class="book-tagline">
+            He had a career that took him across the world.<br/>
+            A mother who was his first home.<br/>
+            A life that felt, for a long time, like his own.<br/>
+            Then all of it was gone.
+          </p>
+
+          <p class="showcase-body">
+            <em>Gold in the Fractures</em> is the story of what happens
+            after the floor gives way — the grief, the silence, the waiting,
+            the betrayal, and the slow, difficult work of learning who you
+            are when everything you believed about yourself has been
+            stripped away.
+          </p>
+
+          <p class="showcase-body">
+            Not a book about fixing yourself. About what remains
+            when the self you constructed has finally, completely, collapsed.
+          </p>
+
+          <div class="showcase-meta">
+            <div class="meta-item">
+              <span class="meta-label">Genre</span>
+              <span class="meta-value">Philosophical Memoir</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Volume</span>
+              <span class="meta-value">I of VI — Loss &amp; Identity</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Publisher</span>
+              <span class="meta-value">SAMIA'S / KDP</span>
+            </div>
+          </div>
+
+          <div class="btn-group">
+            <a href="https://amazon.com/dp/YOUR_ASIN"
+               target="_blank"
+               class="btn-primary">Buy on Amazon</a>
+            <a href="#newsletter"
+               class="btn-secondary">Read Free Sample</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ INSIDE THE BOOK — PULL QUOTES ░░░░░░░░░░░░░░░░ -->
+  <section id="quotes">
+    <div class="container">
+      <p class="section-label">Inside the Book</p>
+      <h2 class="section-title">Words That Stay</h2>
+
+      <div class="quotes-grid">
+
+        <div class="quote-card quote-card--large">
+          <div class="quote-mark">"</div>
+          <p>The fracture you hide, apologize for, lie awake
+          calculating — it is not the end of your story.</p>
+          <cite>— Introduction</cite>
+        </div>
+
+        <div class="quote-card">
+          <div class="quote-mark">"</div>
+          <p>The vessel was broken. The vessel was repaired.
+          The repair was visible. And the vessel, finally,
+          was airborne.</p>
+          <cite>— Chapter 13: Departure</cite>
+        </div>
+
+        <div class="quote-card">
+          <div class="quote-mark">"</div>
+          <p>I did not wake up healed. What happened was smaller.
+          So small I almost missed it. One morning, I opened my
+          eyes and did not immediately wish I hadn't.</p>
+          <cite>— Chapter 6: The Stirring</cite>
+        </div>
+
+        <div class="quote-card">
+          <div class="quote-mark">"</div>
+          <p>Readiness is not proven by movement.
+          It is proven by composure in delay.</p>
+          <cite>— Chapter 7: The Discipline of Waiting</cite>
+        </div>
+
+        <div class="quote-card quote-card--large">
+          <div class="quote-mark">"</div>
+          <p>I didn't come to visit the man in the city.
+          I came to find the man who stayed.</p>
+          <cite>— Chapter 10: The Road to the Embassy</cite>
+        </div>
+
+        <div class="quote-card">
+          <div class="quote-mark">"</div>
+          <p>The mother I could no longer touch outside of me
+          was slowly becoming the mother I could carry within me.</p>
+          <cite>— Chapter 5: The Void</cite>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ AXIOMS STRIP ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+  <section id="axioms">
+    <div class="axioms-track-wrap">
+      <div class="axioms-track">
+        <span>I am loyal to alignment, not attachment.</span>
+        <span class="axiom-dot">·</span>
+        <span>Discipline is my devotion.</span>
+        <span class="axiom-dot">·</span>
+        <span>I do not explain my process to those who did not survive it.</span>
+        <span class="axiom-dot">·</span>
+        <span>The fracture was not the end. It was the beginning.</span>
+        <span class="axiom-dot">·</span>
+        <span>I am loyal to alignment, not attachment.</span>
+        <span class="axiom-dot">·</span>
+        <span>Discipline is my devotion.</span>
+        <span class="axiom-dot">·</span>
+        <span>I do not explain my process to those who did not survive it.</span>
+        <span class="axiom-dot">·</span>
+        <span>The fracture was not the end. It was the beginning.</span>
+        <span class="axiom-dot">·</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ REVIEWS ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+  <section id="reviews">
+    <div class="container">
+      <p class="section-label">Readers</p>
+      <h2 class="section-title">What Remains After Reading</h2>
+
+      <div class="reviews-grid">
+
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>
+            "I have read this three times and each time it finds
+            something in me I did not know was there to be found."
+          </blockquote>
+          <cite>— Reader, Gold in the Fractures</cite>
+        </div>
+
+        <div class="review-card review-card--featured">
+          <div class="stars">★★★★★</div>
+          <blockquote>
+            "This writer understands something about grief that
+            I have never been able to name. Now I don't have to."
+          </blockquote>
+          <cite>— Amazon Review</cite>
+        </div>
+
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>
+            "Not a book you finish. A book that finishes something
+            in you that needed finishing."
+          </blockquote>
+          <cite>— Amazon Review</cite>
+        </div>
+
+      </div>
+
+      <p class="reviews-note">
+        Replace these with real reader reviews as they arrive.
+        Your Amazon reviews belong here.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ░░ ABOUT ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+  <section id="about">
+    <div class="container">
+      <div class="about-inner">
+
+        <div class="about-image-wrap">
+          <div class="about-image-frame">
+            <img
+              src="author-photo.jpg"
+              alt="SAMIA'S — Author"
+              class="about-photo"
+            />
+          </div>
+          <div class="about-image-border"></div>
+          <p class="about-image-caption">SAMIA'S &nbsp;·&nbsp; Kitui, Kenya</p>
+        </div>
+
+        <div class="about-text">
+          <p class="section-label" style="text-align:left">The Author</p>
+          <h2 class="section-title" style="text-align:left">
+            The Cartographer<br/>of Fractures
+          </h2>
+
+          <p>
+            SAMIA'S is a pen name — a permanent tribute to his late mother,
+            Samia. The apostrophe is not punctuation. It is an acknowledgment:
+            this writing remains, in part, hers. An act of remembrance.
+            A sadaqah jāriyah that continues beyond what words can hold.
+          </p>
+
+          <p>
+            Born in Kitui, Kenya. Former Qatar Airways Premium Cabin Crew.
+            He has lived between the sky and the red earth — between the
+            professional who commanded a cabin and the son who lost
+            everything and had to learn to stand again on different ground.
+          </p>
+
+          <p>
+            His life's work is a six-volume existential cycle unified by
+            one question: <em>How does a human being survive the collapse
+            of certainty and emerge not unchanged, but more true?</em>
+          </p>
+
+          <p>
+            This is not self-help. This is not comfort for the comfortable.
+            This is writing for those who have already tried the easy
+            answers and found them insufficient.
+          </p>
+
+          <p class="about-closing">
+            What remains when everything else is stripped away?
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ THE SIX-VOLUME CYCLE ░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+  <section id="cycle">
+    <div class="container">
+      <p class="section-label">The Work Ahead</p>
+      <h2 class="section-title">A Six-Volume Cycle</h2>
+      <p class="section-sub">
+        One question. Six volumes. A life's work.
+      </p>
+
+      <div class="cycle-grid">
+
+        <div class="cycle-item cycle-item--active">
+          <div class="cycle-number">I</div>
+          <div class="cycle-content">
+            <h3>Gold in the Fractures</h3>
+            <p class="cycle-theme">Loss &amp; Identity</p>
+            <p>What remains when the life you built stops holding your weight?</p>
+            <span class="cycle-status cycle-status--available">Available Now</span>
+          </div>
+        </div>
+
+        <div class="cycle-item">
+          <div class="cycle-number">II</div>
+          <div class="cycle-content">
+            <h3>Transforming Suffering</h3>
+            <p class="cycle-theme">Pain as Wisdom</p>
+            <p>How does what breaks us become what builds us?</p>
+            <span class="cycle-status">Coming</span>
+          </div>
+        </div>
+
+        <div class="cycle-item">
+          <div class="cycle-number">III</div>
+          <div class="cycle-content">
+            <h3>Memory Without Entrapment</h3>
+            <p class="cycle-theme">The Past &amp; The Present</p>
+            <p>How do we carry the past without being carried by it?</p>
+            <span class="cycle-status">Coming</span>
+          </div>
+        </div>
+
+        <div class="cycle-item">
+          <div class="cycle-number">IV</div>
+          <div class="cycle-content">
+            <h3>How to Trust After Betrayal</h3>
+            <p class="cycle-theme">Trust &amp; Perception</p>
+            <p>What did I know that I refused to know?</p>
+            <span class="cycle-status cycle-status--writing">In Progress</span>
+          </div>
+        </div>
+
+        <div class="cycle-item">
+          <div class="cycle-number">V</div>
+          <div class="cycle-content">
+            <h3>Love After Loss</h3>
+            <p class="cycle-theme">Preservation &amp; Separation</p>
+            <p>How do we preserve love when the beloved is gone?</p>
+            <span class="cycle-status">Coming</span>
+          </div>
+        </div>
+
+        <div class="cycle-item">
+          <div class="cycle-number">VI</div>
+          <div class="cycle-content">
+            <h3>The Return to Self</h3>
+            <p class="cycle-theme">Essence &amp; Becoming</p>
+            <p>What is left when you have been stripped of everything you thought you were?</p>
+            <span class="cycle-status">Coming</span>
+          </div>
+        </div>
+
+      </div>
+
+      <p class="cycle-unifying">
+        "We are not healed by forgetting what broke us.<br/>
+        We are healed by discovering what remained unbroken within us."
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ░░ NEWSLETTER ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+  <section id="newsletter">
+    <div class="newsletter-inner">
+      <div class="container">
+        <p class="section-label" style="text-align:center">Stay Close to the Work</p>
+        <h2 class="newsletter-title">
+          Writing That Finds You<br/>When You Need It
+        </h2>
+        <p class="newsletter-sub">
+          Reflections, new chapters, and letters from the work —
+          sent only when there is something true to say.
+          No schedule. No noise.
+        </p>
+
+        <form class="newsletter-form" onsubmit="handleSubscribe(event)">
+          <input
+            type="email"
+            placeholder="Your email address"
+            aria-label="Email address"
+            required
+          />
+          <button type="submit">Join</button>
+        </form>
+
+        <p class="newsletter-note">
+          Get the first three chapters of
+          <em>Gold in the Fractures</em> free when you join.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ FOOTER ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+  <footer>
+    <div class="container footer-inner">
+
+      <div class="footer-top">
+        <div class="footer-brand">
+          <p class="footer-logo">SAMIA<span class="gold">'</span>S</p>
+          <p class="footer-tagline">Writing That Remains</p>
+        </div>
+
+        <nav class="footer-nav">
+          <a href="#book">The Book</a>
+          <a href="#quotes">Inside</a>
+          <a href="#about">About</a>
+          <a href="#cycle">The Cycle</a>
+          <a href="#newsletter">Newsletter</a>
+          <a href="https://amazon.com/dp/YOUR_ASIN"
+             target="_blank">Amazon</a>
+        </nav>
+      </div>
+
+      <div class="footer-rule"></div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          © 2026 SAMIA'S. In memory of Samia Salim.
+        </p>
+        <p class="footer-memorial">
+          The apostrophe belongs to her.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ░░ SCRIPT ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+  <script>
+    // ── Nav scroll effect
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('nav--scrolled', window.scrollY > 60);
+    });
+
+    // ── Mobile nav toggle
+    const toggle = document.querySelector('.nav-toggle');
+    const navLinks = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('nav-links--open');
+    });
+
+    // ── Close mobile nav on link click
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('nav-links--open');
+      });
+    });
+
+    // ── Newsletter handler
+    function handleSubscribe(e) {
+      e.preventDefault();
+      const input = e.target.querySelector('input');
+      const btn   = e.target.querySelector('button');
+      btn.textContent  = 'You\'re in.';
+      btn.style.background = '#C5A059';
+      btn.style.color = '#081F2F';
+      input.value = '';
+      // Wire to ConvertKit / Mailchimp endpoint here
+    }
+
+    // ── Scroll-reveal (no library needed)
+    const reveals = document.querySelectorAll(
+      '.quote-card, .review-card, .cycle-item, .book-showcase'
+    );
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('revealed');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(el => observer.observe(el));
+  </script>
 
 </body>
 </html>
