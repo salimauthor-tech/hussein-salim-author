@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════
-   SAMIA'S — Gold in the Fractures
+   SAMIA'S — The Books of Becoming
    Author Website Stylesheet
    Palette: Obsidian · Gunmetal · Outer Space ·
             Blue Gray · Light Steel Blue · Gold
@@ -131,7 +131,8 @@ section { padding: 110px 0; }
 .quote-card,
 .review-card,
 .cycle-item,
-.book-showcase {
+.book-showcase,
+.volume-card {
   opacity: 0;
   transform: translateY(28px);
   transition: opacity 0.7s var(--ease-out),
@@ -187,6 +188,21 @@ section { padding: 110px 0; }
   transition: color 0.2s;
 }
 .nav-links a:hover { color: var(--white); }
+
+.nav-social {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.nav-social a {
+  display: flex;
+  color: var(--steel-blue);
+  transition: color 0.2s, transform 0.2s;
+}
+.nav-social a:hover {
+  color: var(--gold);
+  transform: translateY(-1px);
+}
 
 .nav-cta {
   color: var(--gold) !important;
@@ -254,7 +270,7 @@ section { padding: 110px 0; }
   width: 100%;
 }
 
-/* Book 3D */
+/* Book 3D — stacked triptych for the series */
 .hero-book {
   display: flex;
   justify-content: center;
@@ -263,6 +279,10 @@ section { padding: 110px 0; }
 .book-3d-wrap {
   position: relative;
   display: inline-block;
+}
+.hero-stack {
+  width: 280px;
+  height: 400px;
 }
 .book-cover-img {
   width: 280px;
@@ -273,19 +293,40 @@ section { padding: 110px 0; }
     -8px 16px 40px rgba(0,0,0,0.6),
     -2px 4px 12px rgba(0,0,0,0.4);
 }
-.book-cover-img:hover {
-  transform: perspective(900px) rotateY(-3deg) rotateX(0deg)
-             translateY(-8px);
+.hero-stack .book-cover-img {
+  position: absolute;
+  width: 220px;
+  top: 0;
+}
+.hero-stack-back {
+  left: -50px;
+  transform: perspective(900px) rotateY(-14deg) rotateX(2deg) scale(0.92);
+  opacity: 0.65;
+  z-index: 1;
+}
+.hero-stack-mid {
+  left: -10px;
+  transform: perspective(900px) rotateY(-12deg) rotateX(2deg) scale(0.96);
+  opacity: 0.85;
+  z-index: 2;
+}
+.hero-stack-front {
+  left: 40px;
+  z-index: 3;
+}
+.hero-stack:hover .hero-stack-front {
+  transform: perspective(900px) rotateY(-3deg) rotateX(0deg) translateY(-8px);
 }
 .book-shadow {
   position: absolute;
   bottom: -24px;
   left: 50%;
   transform: translateX(-50%);
-  width: 200px;
+  width: 220px;
   height: 24px;
   background: radial-gradient(ellipse, rgba(0,0,0,0.5) 0%, transparent 70%);
   filter: blur(8px);
+  z-index: 0;
 }
 
 /* Hero text */
@@ -397,9 +438,93 @@ section { padding: 110px 0; }
 }
 
 /* ═══════════════════════════════════════════════════════
-   BOOK SHOWCASE
+   SERIES — VOLUME CARDS (primary showcase)
 ═══════════════════════════════════════════════════════ */
-#book { background: var(--obsidian); }
+#series { background: var(--obsidian); }
+
+.volumes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-bottom: 90px;
+}
+
+.volume-card {
+  background: rgba(36,61,82,0.35);
+  border: 1px solid rgba(172,188,204,0.09);
+  padding: 32px 28px 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: border-color 0.3s, transform 0.3s, background 0.3s;
+}
+.volume-card:hover {
+  border-color: rgba(197,160,89,0.3);
+  background: rgba(36,61,82,0.6);
+  transform: translateY(-6px);
+}
+
+.volume-cover {
+  margin-bottom: 24px;
+}
+.volume-cover img {
+  width: 150px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  border-radius: 2px;
+}
+
+.volume-roman {
+  font-family: var(--ff-serif);
+  font-size: 0.85rem;
+  letter-spacing: 0.3em;
+  color: var(--gold);
+  margin-bottom: 10px;
+  display: block;
+}
+
+.volume-body h3 {
+  font-size: 1.25rem;
+  margin-bottom: 6px;
+}
+
+.volume-theme {
+  font-family: var(--ff-ui);
+  font-size: 0.66rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+
+.volume-desc {
+  font-size: 0.92rem;
+  font-style: italic;
+  color: var(--steel-blue);
+  line-height: 1.75;
+  margin-bottom: 24px;
+}
+
+.volume-buy {
+  padding: 12px 30px;
+  font-size: 0.7rem;
+}
+
+.volume-card--pending {
+  opacity: 0.85;
+}
+.volume-card--pending .volume-cover img {
+  filter: grayscale(40%);
+}
+
+.cycle-grid--forthcoming {
+  margin-bottom: 60px;
+}
+
+/* ═══════════════════════════════════════════════════════
+   BOOK SHOWCASE (Gold in the Fractures — standalone)
+═══════════════════════════════════════════════════════ */
+#gold { background: var(--gunmetal); }
 
 .book-showcase {
   display: grid;
@@ -453,7 +578,7 @@ section { padding: 110px 0; }
   margin: 32px 0;
   padding: 24px;
   border: 1px solid rgba(172,188,204,0.1);
-  background: rgba(36,61,82,0.3);
+  background: rgba(8,31,47,0.3);
 }
 
 .meta-item {
@@ -697,13 +822,26 @@ section { padding: 110px 0; }
   line-height: 1.5 !important;
 }
 
-/* ═══════════════════════════════════════════════════════
-   SIX-VOLUME CYCLE
-═══════════════════════════════════════════════════════ */
-#cycle {
-  background: var(--obsidian);
+.about-social {
+  margin-top: 28px;
+  font-family: var(--ff-ui);
+  font-size: 0.76rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.about-social a {
+  color: var(--gold);
+  transition: color 0.2s;
+}
+.about-social a:hover { color: var(--white); }
+.about-social-dot {
+  color: var(--blue-gray);
+  margin: 0 10px;
 }
 
+/* ═══════════════════════════════════════════════════════
+   SIX-VOLUME CYCLE (forthcoming volumes IV–VI)
+═══════════════════════════════════════════════════════ */
 .cycle-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -722,19 +860,6 @@ section { padding: 110px 0; }
   border-color: rgba(197,160,89,0.15);
 }
 
-.cycle-item--active {
-  background: rgba(36,61,82,0.95);
-  border-color: rgba(197,160,89,0.3) !important;
-  position: relative;
-}
-.cycle-item--active::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 2px;
-  background: var(--gold);
-}
-
 .cycle-number {
   font-family: var(--ff-serif);
   font-size: 2.5rem;
@@ -742,9 +867,6 @@ section { padding: 110px 0; }
   font-weight: 900;
   margin-bottom: 12px;
   line-height: 1;
-}
-.cycle-item--active .cycle-number {
-  color: var(--gold);
 }
 
 .cycle-content h3 {
@@ -779,16 +901,6 @@ section { padding: 110px 0; }
   padding: 4px 12px;
   border: 1px solid rgba(172,188,204,0.2);
   color: var(--blue-gray);
-}
-.cycle-status--available {
-  border-color: rgba(197,160,89,0.5);
-  color: var(--gold);
-  background: rgba(197,160,89,0.08);
-}
-.cycle-status--writing {
-  border-color: rgba(172,188,204,0.3);
-  color: var(--steel-blue);
-  background: rgba(172,188,204,0.05);
 }
 
 .cycle-unifying {
@@ -868,6 +980,15 @@ section { padding: 110px 0; }
   color: var(--obsidian);
 }
 
+.newsletter-status {
+  text-align: center;
+  font-family: var(--ff-ui);
+  font-size: 0.74rem;
+  color: var(--steel-blue);
+  margin-top: 14px;
+  min-height: 1.2em;
+}
+
 .newsletter-note {
   text-align: center;
   font-family: var(--ff-ui);
@@ -910,6 +1031,21 @@ footer {
   font-style: italic;
   color: var(--blue-gray);
   font-size: 0.9rem;
+  margin-bottom: 16px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 16px;
+}
+.footer-social a {
+  display: flex;
+  color: var(--blue-gray);
+  transition: color 0.2s, transform 0.2s;
+}
+.footer-social a:hover {
+  color: var(--gold);
+  transform: translateY(-1px);
 }
 
 .footer-nav {
@@ -969,10 +1105,16 @@ footer {
     padding-bottom: 70px;
   }
   .hero-book { order: -1; }
-  .book-cover-img { width: 200px; }
+  .hero-stack { width: 220px; height: 300px; margin: 0 auto; }
+  .hero-stack .book-cover-img { width: 170px; }
+  .hero-stack-back { left: -10px; }
+  .hero-stack-mid { left: 10px; }
+  .hero-stack-front { left: 30px; }
   .hero-body { margin-left: auto; margin-right: auto; }
   .hero-divider { margin: 0 auto 24px; }
   .btn-group { justify-content: center; }
+
+  .volumes-grid { grid-template-columns: 1fr; }
 
   .book-showcase {
     grid-template-columns: 1fr;
@@ -981,7 +1123,6 @@ footer {
   }
   .showcase-cover { margin: 0 auto; }
   .showcase-cover img { width: 180px; }
-  .btn-group { justify-content: center; }
 
   .quotes-grid {
     grid-template-columns: 1fr;
@@ -999,10 +1140,12 @@ footer {
   .about-text .section-title,
   .about-text p,
   .about-closing { text-align: center; }
+  .about-social { text-align: center; }
 
   .cycle-grid { grid-template-columns: 1fr 1fr; }
 
   .footer-top { flex-direction: column; }
+  .footer-brand .footer-social { justify-content: center; }
   .footer-bottom { flex-direction: column; text-align: center; }
 }
 
@@ -1027,6 +1170,7 @@ footer {
   }
   .nav-links--open { display: flex; }
   .nav-toggle { display: block; }
+  .nav-social { justify-content: center; }
 
   .cycle-grid { grid-template-columns: 1fr; }
 
